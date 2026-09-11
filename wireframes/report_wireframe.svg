@@ -1,4 +1,4 @@
-<svg viewBox="0 0 1240 1160" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+<svg viewBox="0 0 1240 1020" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
   <defs>
     <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
       <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#1a2540" flood-opacity="0.14"/>
@@ -9,10 +9,10 @@
     </linearGradient>
   </defs>
 
-  <rect x="0" y="0" width="1240" height="1160" fill="#eef1f6"/>
+  <rect x="0" y="0" width="1240" height="1020" fill="#eef1f6"/>
 
   <text x="40" y="34" font-size="23" font-weight="700" fill="#1a2540">EPFO Payroll Analytics — Report Wireframe</text>
-  <text x="40" y="56" font-size="13" fill="#6b7280">3 consolidated pages, each carrying several visuals — Phase 4 blueprint</text>
+  <text x="40" y="56" font-size="13" fill="#6b7280">2 pages, each carrying several visuals — Phase 4 blueprint</text>
 
   <!-- ============================================================ PAGE 1: Overview & Trend ============================================================ -->
   <g transform="translate(40,80)">
@@ -49,7 +49,6 @@
     </g>
 
     <!-- 3-column chart row -->
-    <!-- Trend chart -->
     <rect x="12" y="104" width="500" height="184" rx="6" fill="#ffffff" stroke="#e5e9f0"/>
     <text x="24" y="120" font-size="9.5" fill="#6b7280">Net Payroll (solid) + Rolling 3M Avg (dashed)</text>
     <line x1="34" y1="134" x2="34" y2="238" stroke="#d7deea"/>
@@ -60,7 +59,6 @@
       fill="none" stroke="#2454A8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
     <polyline points="34,232 80,224 126,219 172,206 218,196 264,193 310,180 356,174 402,163 448,157 490,146"
       fill="none" stroke="#d98a3d" stroke-width="1.6" stroke-dasharray="5,3" stroke-linecap="round"/>
-    <!-- mini waterfall strip beneath -->
     <text x="24" y="256" font-size="8.5" fill="#6b7280">MoM contribution</text>
     <line x1="34" y1="282" x2="490" y2="282" stroke="#d7deea"/>
     <g>
@@ -72,7 +70,6 @@
       <rect x="394" y="228" width="30" height="10" fill="#3fa15e"/><rect x="430" y="222" width="30" height="6" fill="#c0574f"/>
     </g>
 
-    <!-- Smart narrative + heatmap column -->
     <rect x="524" y="104" width="312" height="80" rx="6" fill="#f4f6fa"/>
     <circle cx="540" cy="120" r="6" fill="#2454A8" opacity="0.85"/>
     <text x="540" y="124" font-size="7" fill="#ffffff" text-anchor="middle" font-weight="700">i</text>
@@ -89,9 +86,7 @@
       <rect x="0" y="13" width="22" height="11" fill="#9fb8e0"/><rect x="23" y="13" width="22" height="11" fill="#6f93cf"/><rect x="46" y="13" width="22" height="11" fill="#4b78bf"/><rect x="69" y="13" width="22" height="11" fill="#2454A8"/><rect x="92" y="13" width="22" height="11" fill="#183a7a"/><rect x="115" y="13" width="22" height="11" fill="#2454A8"/><rect x="138" y="13" width="22" height="11" fill="#4b78bf"/><rect x="161" y="13" width="22" height="11" fill="#6f93cf"/><rect x="184" y="13" width="22" height="11" fill="#9fb8e0"/><rect x="207" y="13" width="22" height="11" fill="#6f93cf"/><rect x="230" y="13" width="22" height="11" fill="#4b78bf"/><rect x="253" y="13" width="22" height="11" fill="#2454A8"/>
       <rect x="0" y="26" width="22" height="11" fill="#6f93cf"/><rect x="23" y="26" width="22" height="11" fill="#4b78bf"/><rect x="46" y="26" width="22" height="11" fill="#2454A8"/><rect x="69" y="26" width="22" height="11" fill="#183a7a"/><rect x="92" y="26" width="22" height="11" fill="#0f2c61"/><rect x="115" y="26" width="22" height="11" fill="#183a7a"/><rect x="138" y="26" width="22" height="11" fill="#2454A8"/><rect x="161" y="26" width="22" height="11" fill="#e2e6ed"/><rect x="184" y="26" width="22" height="11" fill="#e2e6ed"/><rect x="207" y="26" width="22" height="11" fill="#e2e6ed"/><rect x="230" y="26" width="22" height="11" fill="#e2e6ed"/><rect x="253" y="26" width="22" height="11" fill="#e2e6ed"/>
     </g>
-    <text x="536" y="278" font-size="7.5" fill="#9aa4b2">2023</text><text x="536" y="291" font-size="0"> </text>
 
-    <!-- KPI strip 2 -->
     <rect x="848" y="104" width="300" height="184" rx="6" fill="#f4f6fa"/>
     <text x="860" y="122" font-size="9" fill="#6b7280">This Month vs. Last 2 Years</text>
     <line x1="868" y1="176" x2="1132" y2="176" stroke="#d7deea"/>
@@ -112,147 +107,117 @@
     <text x="992" y="271" font-size="8" fill="#374151" text-anchor="middle">Slicers: Fiscal Year ▾  Age Band ▾</text>
   </g>
 
-  <!-- ============================================================ PAGE 2: Age-Band & COVID-19 Analysis ============================================================ -->
+  <!-- ============================================================ PAGE 2: Age-Band Breakdown & COVID-19 Analysis (full page) ============================================================ -->
   <g transform="translate(40,404)">
-    <rect x="0" y="0" width="1160" height="320" rx="10" fill="#ffffff" stroke="#dde3ec" filter="url(#cardShadow)"/>
+    <rect x="0" y="0" width="1160" height="450" rx="10" fill="#ffffff" stroke="#dde3ec" filter="url(#cardShadow)"/>
     <rect x="0" y="0" width="1160" height="30" rx="10" fill="#2454A8"/>
     <rect x="0" y="14" width="1160" height="16" fill="#2454A8"/>
     <text x="20" y="20" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
     <text x="38" y="20" font-size="13" font-weight="700" fill="#ffffff">Age-Band Breakdown &amp; COVID-19 Analysis</text>
 
     <!-- Row A: age-band visuals -->
-    <rect x="12" y="40" width="275" height="130" rx="6" fill="#ffffff" stroke="#e5e9f0"/>
-    <text x="24" y="56" font-size="9" fill="#6b7280">Decomposition Tree</text>
-    <g stroke="#a9bcdc" stroke-width="1.4" fill="none">
-      <line x1="150" y1="78" x2="90" y2="115"/><line x1="150" y1="78" x2="150" y2="115"/><line x1="150" y1="78" x2="210" y2="115"/>
+    <rect x="12" y="40" width="275" height="180" rx="6" fill="#ffffff" stroke="#e5e9f0"/>
+    <text x="24" y="58" font-size="9.5" fill="#6b7280">Decomposition Tree</text>
+    <g stroke="#a9bcdc" stroke-width="1.6" fill="none">
+      <line x1="150" y1="88" x2="80" y2="140"/><line x1="150" y1="88" x2="150" y2="140"/><line x1="150" y1="88" x2="220" y2="140"/>
     </g>
-    <circle cx="150" cy="78" r="8" fill="#2454A8"/><circle cx="90" cy="115" r="6" fill="#5a86c9"/><circle cx="150" cy="115" r="6" fill="#5a86c9"/><circle cx="210" cy="115" r="6" fill="#5a86c9"/>
-    <text x="150" y="150" font-size="8" fill="#9aa4b2" text-anchor="middle">Total → Age Band → Month</text>
+    <circle cx="150" cy="88" r="9" fill="#2454A8"/><circle cx="80" cy="140" r="7" fill="#5a86c9"/><circle cx="150" cy="140" r="7" fill="#5a86c9"/><circle cx="220" cy="140" r="7" fill="#5a86c9"/>
+    <text x="150" y="172" font-size="9" fill="#9aa4b2" text-anchor="middle">Total → Age Band → Month</text>
 
-    <rect x="299" y="40" width="275" height="130" rx="6" fill="#ffffff" stroke="#e5e9f0"/>
-    <text x="311" y="56" font-size="9" fill="#6b7280">Net Payroll by Age Band</text>
-    <line x1="315" y1="152" x2="562" y2="152" stroke="#d7deea"/>
+    <rect x="299" y="40" width="275" height="180" rx="6" fill="#ffffff" stroke="#e5e9f0"/>
+    <text x="311" y="58" font-size="9.5" fill="#6b7280">Net Payroll by Age Band</text>
+    <line x1="315" y1="196" x2="562" y2="196" stroke="#d7deea"/>
     <g fill="#2454A8">
-      <rect x="322" y="112" width="26" height="40" rx="2"/><rect x="360" y="92" width="26" height="60" rx="2"/><rect x="398" y="122" width="26" height="30" rx="2"/>
-      <rect x="436" y="100" width="26" height="52" rx="2"/><rect x="474" y="116" width="26" height="36" rx="2"/><rect x="512" y="86" width="26" height="66" rx="2"/>
+      <rect x="322" y="140" width="28" height="56" rx="2"/><rect x="362" y="110" width="28" height="86" rx="2"/><rect x="402" y="152" width="28" height="44" rx="2"/>
+      <rect x="442" y="122" width="28" height="74" rx="2"/><rect x="482" y="145" width="28" height="51" rx="2"/><rect x="522" y="100" width="28" height="96" rx="2"/>
     </g>
 
-    <rect x="586" y="40" width="275" height="130" rx="6" fill="#ffffff" stroke="#e5e9f0"/>
-    <text x="598" y="56" font-size="9" fill="#6b7280">Share of Total</text>
-    <g transform="translate(650,112)">
-      <circle r="34" fill="none" stroke="#e2e6ed" stroke-width="14"/>
-      <circle r="34" fill="none" stroke="#2454A8" stroke-width="14" stroke-dasharray="60 154"/>
-      <circle r="34" fill="none" stroke="#5a86c9" stroke-width="14" stroke-dasharray="45 169" stroke-dashoffset="-60"/>
-      <circle r="34" fill="none" stroke="#d98a3d" stroke-width="14" stroke-dasharray="38 176" stroke-dashoffset="-105"/>
-      <circle r="34" fill="none" stroke="#9aa4b2" stroke-width="14" stroke-dasharray="70 144" stroke-dashoffset="-143"/>
+    <rect x="586" y="40" width="275" height="180" rx="6" fill="#ffffff" stroke="#e5e9f0"/>
+    <text x="598" y="58" font-size="9.5" fill="#6b7280">Share of Total</text>
+    <g transform="translate(650,140)">
+      <circle r="46" fill="none" stroke="#e2e6ed" stroke-width="18"/>
+      <circle r="46" fill="none" stroke="#2454A8" stroke-width="18" stroke-dasharray="81 208"/>
+      <circle r="46" fill="none" stroke="#5a86c9" stroke-width="18" stroke-dasharray="61 228" stroke-dashoffset="-81"/>
+      <circle r="46" fill="none" stroke="#d98a3d" stroke-width="18" stroke-dasharray="51 238" stroke-dashoffset="-142"/>
+      <circle r="46" fill="none" stroke="#9aa4b2" stroke-width="18" stroke-dasharray="96 193" stroke-dashoffset="-193"/>
     </g>
-    <g font-size="7.5" fill="#6b7280">
-      <rect x="720" y="88" width="7" height="7" fill="#2454A8"/><text x="731" y="94">22-25</text>
-      <rect x="720" y="102" width="7" height="7" fill="#5a86c9"/><text x="731" y="108">26-28</text>
-      <rect x="720" y="116" width="7" height="7" fill="#d98a3d"/><text x="731" y="122">29-35</text>
-      <rect x="720" y="130" width="7" height="7" fill="#9aa4b2"/><text x="731" y="136">others</text>
+    <g font-size="8.5" fill="#6b7280">
+      <rect x="728" y="112" width="8" height="8" fill="#2454A8"/><text x="740" y="119">22-25</text>
+      <rect x="728" y="128" width="8" height="8" fill="#5a86c9"/><text x="740" y="135">26-28</text>
+      <rect x="728" y="144" width="8" height="8" fill="#d98a3d"/><text x="740" y="151">29-35</text>
+      <rect x="728" y="160" width="8" height="8" fill="#9aa4b2"/><text x="740" y="167">others</text>
     </g>
 
-    <rect x="873" y="40" width="275" height="130" rx="6" fill="#f4f6fa"/>
-    <text x="885" y="56" font-size="9" fill="#374151" font-weight="600">Key Influencers</text>
-    <text x="885" y="70" font-size="8" fill="#6b7280">"What drives net growth?"</text>
+    <rect x="873" y="40" width="275" height="180" rx="6" fill="#f4f6fa"/>
+    <text x="885" y="58" font-size="9.5" fill="#374151" font-weight="600">Key Influencers</text>
+    <text x="885" y="72" font-size="8.5" fill="#6b7280">"What drives net growth?"</text>
     <g fill="#a9bcdc">
-      <rect x="885" y="82" width="240" height="7" rx="2"/><rect x="885" y="98" width="200" height="7" rx="2"/>
-      <rect x="885" y="114" width="220" height="7" rx="2"/><rect x="885" y="130" width="170" height="7" rx="2"/>
+      <rect x="885" y="86" width="240" height="8" rx="2"/><rect x="885" y="104" width="200" height="8" rx="2"/>
+      <rect x="885" y="122" width="220" height="8" rx="2"/><rect x="885" y="140" width="170" height="8" rx="2"/>
+      <rect x="885" y="158" width="190" height="8" rx="2"/>
     </g>
-    <text x="885" y="156" font-size="8" fill="#6b7280">+ small-multiples sparklines,</text>
-    <text x="885" y="166" font-size="8" fill="#6b7280">one per age band (not pictured)</text>
+    <text x="885" y="200" font-size="8" fill="#9aa4b2">AI-generated, ranked by statistical influence</text>
 
-    <!-- Row B: COVID visuals -->
-    <rect x="12" y="182" width="366" height="126" rx="6" fill="#ffffff" stroke="#e5e9f0"/>
-    <text x="24" y="198" font-size="9" fill="#6b7280">Avg Monthly Net Payroll — before / during / after</text>
-    <line x1="34" y1="288" x2="366" y2="288" stroke="#d7deea"/>
-    <rect x="70" y="222" width="60" height="66" rx="3" fill="#2454A8"/><text x="100" y="300" font-size="8" fill="#6b7280" text-anchor="middle">Pre-COVID</text>
-    <rect x="180" y="264" width="60" height="24" rx="3" fill="#b23b3b"/><text x="210" y="300" font-size="8" fill="#6b7280" text-anchor="middle">COVID-Era</text>
-    <text x="210" y="258" font-size="8" fill="#b23b3b" text-anchor="middle" font-weight="700">-84%</text>
-    <rect x="290" y="208" width="60" height="80" rx="3" fill="#3fa15e"/><text x="320" y="300" font-size="8" fill="#6b7280" text-anchor="middle">Recovery</text>
+    <!-- Row B: small-multiples sparklines, one per age band -->
+    <rect x="12" y="230" width="1136" height="94" rx="6" fill="#f4f6fa"/>
+    <text x="24" y="246" font-size="9.5" fill="#374151" font-weight="600">Trend by Age Band — small multiples</text>
+    <g font-size="7.5" fill="#9aa4b2" text-anchor="middle">
+      <!-- 6 mini charts -->
+      <rect x="24" y="254" width="170" height="58" rx="4" fill="#ffffff" stroke="#e5e9f0"/>
+      <polyline points="32,300 60,292 88,296 116,282 144,286 172,270" fill="none" stroke="#2454A8" stroke-width="1.6"/>
+      <text x="109" y="308">Less than 18</text>
 
-    <rect x="390" y="182" width="366" height="126" rx="6" fill="#ffffff" stroke="#e5e9f0"/>
-    <text x="402" y="198" font-size="9" fill="#6b7280">Trend, zoomed to 2019-2021</text>
-    <rect x="530" y="210" width="80" height="70" fill="#e57373" opacity="0.22"/>
-    <line x1="530" y1="210" x2="530" y2="280" stroke="#b23b3b" stroke-dasharray="3,2"/><line x1="610" y1="210" x2="610" y2="280" stroke="#b23b3b" stroke-dasharray="3,2"/>
-    <text x="570" y="224" font-size="7.5" fill="#8a3d3d" text-anchor="middle" font-weight="600">Mar-Aug 2020</text>
-    <line x1="404" y1="280" x2="742" y2="280" stroke="#d7deea"/>
-    <polyline points="404,248 440,236 476,224 512,258 530,266 570,272 610,210 646,198 682,186 718,174 742,162"
+      <rect x="202" y="254" width="170" height="58" rx="4" fill="#ffffff" stroke="#e5e9f0"/>
+      <polyline points="210,298 238,288 266,292 294,270 322,276 350,254" fill="none" stroke="#5a86c9" stroke-width="1.6"/>
+      <text x="287" y="308">18-21</text>
+
+      <rect x="380" y="254" width="170" height="58" rx="4" fill="#ffffff" stroke="#e5e9f0"/>
+      <polyline points="388,296 416,284 444,290 472,264 500,272 528,250" fill="none" stroke="#d98a3d" stroke-width="1.6"/>
+      <text x="465" y="308">22-25</text>
+
+      <rect x="558" y="254" width="170" height="58" rx="4" fill="#ffffff" stroke="#e5e9f0"/>
+      <polyline points="566,300 594,290 622,294 650,276 678,282 706,262" fill="none" stroke="#9aa4b2" stroke-width="1.6"/>
+      <text x="643" y="308">26-28</text>
+
+      <rect x="736" y="254" width="170" height="58" rx="4" fill="#ffffff" stroke="#e5e9f0"/>
+      <polyline points="744,298 772,286 800,290 828,268 856,274 884,256" fill="none" stroke="#3fa15e" stroke-width="1.6"/>
+      <text x="821" y="308">29-35</text>
+
+      <rect x="914" y="254" width="222" height="58" rx="4" fill="#ffffff" stroke="#e5e9f0"/>
+      <polyline points="924,300 958,288 992,292 1026,272 1060,278 1094,258" fill="none" stroke="#c0574f" stroke-width="1.6"/>
+      <text x="1025" y="308">More than 35</text>
+    </g>
+
+    <!-- Row C: COVID visuals -->
+    <rect x="12" y="336" width="366" height="102" rx="6" fill="#ffffff" stroke="#e5e9f0"/>
+    <text x="24" y="352" font-size="9.5" fill="#6b7280">Avg Monthly Net Payroll — before/during/after</text>
+    <line x1="34" y1="426" x2="366" y2="426" stroke="#d7deea"/>
+    <rect x="70" y="370" width="56" height="56" rx="3" fill="#2454A8"/><text x="98" y="438" font-size="8.5" fill="#6b7280" text-anchor="middle">Pre-COVID</text>
+    <rect x="176" y="406" width="56" height="20" rx="3" fill="#b23b3b"/><text x="204" y="438" font-size="8.5" fill="#6b7280" text-anchor="middle">COVID-Era</text>
+    <text x="204" y="400" font-size="8.5" fill="#b23b3b" text-anchor="middle" font-weight="700">-84%</text>
+    <rect x="282" y="360" width="56" height="66" rx="3" fill="#3fa15e"/><text x="310" y="438" font-size="8.5" fill="#6b7280" text-anchor="middle">Recovery</text>
+
+    <rect x="390" y="336" width="366" height="102" rx="6" fill="#ffffff" stroke="#e5e9f0"/>
+    <text x="402" y="352" font-size="9.5" fill="#6b7280">Trend, zoomed to 2019-2021</text>
+    <rect x="530" y="364" width="80" height="60" fill="#e57373" opacity="0.22"/>
+    <line x1="530" y1="364" x2="530" y2="424" stroke="#b23b3b" stroke-dasharray="3,2"/><line x1="610" y1="364" x2="610" y2="424" stroke="#b23b3b" stroke-dasharray="3,2"/>
+    <text x="570" y="378" font-size="8" fill="#8a3d3d" text-anchor="middle" font-weight="600">Mar-Aug 2020</text>
+    <line x1="404" y1="424" x2="742" y2="424" stroke="#d7deea"/>
+    <polyline points="404,398 440,388 476,378 512,406 530,412 570,417 610,364 646,354 682,344 718,334 742,324"
       fill="none" stroke="#2454A8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 
-    <rect x="768" y="182" width="380" height="126" rx="6" fill="#fbecec"/>
-    <text x="780" y="198" font-size="9" fill="#8a3d3d">Recovery Timeline</text>
-    <line x1="784" y1="230" x2="1130" y2="230" stroke="#e6bcbc" stroke-width="3"/>
-    <circle cx="830" cy="230" r="6" fill="#b23b3b"/><text x="830" y="248" font-size="7.5" fill="#8a3d3d" text-anchor="middle">Lockdown</text>
-    <circle cx="957" cy="230" r="6" fill="#d98a3d"/><text x="957" y="248" font-size="7.5" fill="#8a3d3d" text-anchor="middle">Recovering</text>
-    <circle cx="1084" cy="230" r="6" fill="#3fa15e"/><text x="1084" y="248" font-size="7.5" fill="#8a3d3d" text-anchor="middle">Fully recovered</text>
-    <rect x="784" y="264" width="346" height="7" rx="2" fill="#e6bcbc"/>
-    <rect x="784" y="278" width="290" height="7" rx="2" fill="#e6bcbc"/>
-    <circle cx="792" cy="296" r="6" fill="#b23b3b"/><text x="792" y="300" font-size="6.5" fill="#ffffff" text-anchor="middle" font-weight="700">!</text>
-    <rect x="806" y="292" width="300" height="6" rx="2" fill="#e6bcbc"/>
-  </g>
-
-  <!-- ============================================================ PAGE 3: Methodology ============================================================ -->
-  <g transform="translate(40,752)">
-    <rect x="0" y="0" width="1160" height="240" rx="10" fill="#ffffff" stroke="#dde3ec" filter="url(#cardShadow)"/>
-    <rect x="0" y="0" width="1160" height="30" rx="10" fill="#2454A8"/>
-    <rect x="0" y="14" width="1160" height="16" fill="#2454A8"/>
-    <text x="20" y="20" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
-    <text x="38" y="20" font-size="13" font-weight="700" fill="#ffffff">Methodology</text>
-
-    <!-- left: numbered list -->
-    <g transform="translate(12,48)">
-      <circle cx="12" cy="8" r="8" fill="#2454A8"/><text x="12" y="12" font-size="9" fill="#ffffff" text-anchor="middle" font-weight="700">1</text>
-      <text x="30" y="5" font-size="10" font-weight="600" fill="#374151">Data source</text>
-      <text x="30" y="19" font-size="9" fill="#6b7280">EPFO data-hub (epfo.gov.in) + Wayback Machine recovery for 2019-2020</text>
-
-      <circle cx="12" cy="44" r="8" fill="#2454A8"/><text x="12" y="48" font-size="9" fill="#ffffff" text-anchor="middle" font-weight="700">2</text>
-      <text x="30" y="41" font-size="10" font-weight="600" fill="#374151">Refresh cadence</text>
-      <text x="30" y="55" font-size="9" fill="#6b7280">Monthly, manual — drop the new PDF into data/raw, hit Refresh</text>
-
-      <circle cx="12" cy="80" r="8" fill="#2454A8"/><text x="12" y="84" font-size="9" fill="#ffffff" text-anchor="middle" font-weight="700">3</text>
-      <text x="30" y="77" font-size="10" font-weight="600" fill="#374151">Known limitations</text>
-      <text x="30" y="91" font-size="9" fill="#6b7280">1 file (2019-09) unparseable; "provisional" figures get revised later</text>
-
-      <circle cx="12" cy="116" r="8" fill="#2454A8"/><text x="12" y="120" font-size="9" fill="#ffffff" text-anchor="middle" font-weight="700">4</text>
-      <text x="30" y="113" font-size="10" font-weight="600" fill="#374151">Data model</text>
-      <text x="30" y="127" font-size="9" fill="#6b7280">Star schema — one fact table (Month x AgeBand grain), one date dimension</text>
-
-      <circle cx="12" cy="152" r="8" fill="#2454A8"/><text x="12" y="156" font-size="9" fill="#ffffff" text-anchor="middle" font-weight="700">5</text>
-      <text x="30" y="149" font-size="10" font-weight="600" fill="#374151">Full documentation</text>
-      <text x="30" y="163" font-size="9" fill="#6b7280">github.com/LakshayTyagi4/INDIA-EPFO-PAYROLL-ANALYTICS</text>
-    </g>
-
-    <!-- right: mini data model + pipeline -->
-    <rect x="600" y="44" width="548" height="82" rx="6" fill="#f4f6fa"/>
-    <text x="614" y="60" font-size="9.5" fill="#374151" font-weight="600">Data model</text>
-    <rect x="614" y="70" width="200" height="46" rx="5" fill="#ffffff" stroke="#c9d3e2"/>
-    <text x="714" y="88" font-size="9" fill="#2454A8" font-weight="700" text-anchor="middle">Calendar</text>
-    <text x="714" y="100" font-size="7.5" fill="#9aa4b2" text-anchor="middle">Date, Year, FiscalYear... (1)</text>
-    <line x1="814" y1="93" x2="900" y2="93" stroke="#2454A8" stroke-width="1.5"/>
-    <polygon points="900,89 910,93 900,97" fill="#2454A8"/>
-    <rect x="910" y="70" width="230" height="46" rx="5" fill="#ffffff" stroke="#c9d3e2"/>
-    <text x="1025" y="88" font-size="9" fill="#2454A8" font-weight="700" text-anchor="middle">PayrollMonthlyRaw</text>
-    <text x="1025" y="100" font-size="7.5" fill="#9aa4b2" text-anchor="middle">Month x AgeBand grain (*)</text>
-
-    <rect x="600" y="134" width="548" height="90" rx="6" fill="#ffffff" stroke="#e5e9f0"/>
-    <text x="614" y="150" font-size="9.5" fill="#6b7280">End-to-end pipeline</text>
-    <g font-size="8" fill="#2454A8" text-anchor="middle">
-      <rect x="614" y="162" width="92" height="44" rx="5" fill="#e8edf5"/><text x="660" y="182">EPFO PDFs</text><text x="660" y="194">(66 files)</text>
-      <rect x="718" y="162" width="92" height="44" rx="5" fill="#e8edf5"/><text x="764" y="182">Power Query</text><text x="764" y="194">parse+combine</text>
-      <rect x="822" y="162" width="92" height="44" rx="5" fill="#e8edf5"/><text x="868" y="182">Star Schema</text><text x="868" y="194">fact+calendar</text>
-      <rect x="926" y="162" width="92" height="44" rx="5" fill="#e8edf5"/><text x="972" y="182">DAX</text><text x="972" y="194">measures</text>
-      <rect x="1030" y="162" width="100" height="44" rx="5" fill="#2454A8"/><text x="1080" y="182" fill="#ffffff">Report</text><text x="1080" y="194" fill="#ffffff">pages</text>
-    </g>
-    <g stroke="#a9bcdc" stroke-width="1.3">
-      <line x1="706" y1="184" x2="718" y2="184"/><line x1="810" y1="184" x2="822" y2="184"/>
-      <line x1="914" y1="184" x2="926" y2="184"/><line x1="1018" y1="184" x2="1030" y2="184"/>
-    </g>
+    <rect x="768" y="336" width="380" height="102" rx="6" fill="#fbecec"/>
+    <text x="780" y="352" font-size="9.5" fill="#8a3d3d">Recovery Timeline</text>
+    <line x1="784" y1="380" x2="1130" y2="380" stroke="#e6bcbc" stroke-width="3"/>
+    <circle cx="830" cy="380" r="6" fill="#b23b3b"/><text x="830" y="398" font-size="8" fill="#8a3d3d" text-anchor="middle">Lockdown</text>
+    <circle cx="957" cy="380" r="6" fill="#d98a3d"/><text x="957" y="398" font-size="8" fill="#8a3d3d" text-anchor="middle">Recovering</text>
+    <circle cx="1084" cy="380" r="6" fill="#3fa15e"/><text x="1084" y="398" font-size="8" fill="#8a3d3d" text-anchor="middle">Fully recovered</text>
+    <circle cx="792" cy="416" r="6" fill="#b23b3b"/><text x="792" y="420" font-size="7" fill="#ffffff" text-anchor="middle" font-weight="700">!</text>
+    <rect x="806" y="412" width="300" height="7" rx="2" fill="#e6bcbc"/>
   </g>
 
   <!-- ============================================================ Legend strip ============================================================ -->
-  <g transform="translate(40,1012)">
+  <g transform="translate(40,872)">
     <rect x="0" y="0" width="1160" height="112" rx="10" fill="#ffffff" stroke="#dde3ec" filter="url(#cardShadow)"/>
     <text x="16" y="22" font-size="11" font-weight="700" fill="#1a2540">Legend</text>
     <g font-size="9" fill="#374151">
