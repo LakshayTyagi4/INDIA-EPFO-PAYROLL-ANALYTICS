@@ -40,14 +40,31 @@ A DAX calculated table (Modeling → New table):
 ```dax
 Calendar = CALENDAR(MIN(PayrollMonthlyRaw[MonthStart]), MAX(PayrollMonthlyRaw[MonthStart]))
 ```
-One row per day spanning the fact table's full date range. Year/Month/Quarter
-columns and marking it as an official Date Table are the next step (see
-`dax/README.md` for the measure library as it's built out).
+One row per day spanning the fact table's full date range. Its true minimum turned
+out to be **April 2019**, not July 2019 (our earliest standalone file) — the same
+retroactive-fiscal-year effect that recovered July 2024 also means `2019-07.pdf`
+itself retroactively includes Apr/May/Jun 2019, the start of that fiscal year.
+
+Calculated columns added:
+- `Year`, `MonthNumber`, `MonthName`, `Quarter` — standard calendar attributes
+- `YearMonthSort` (`YYYYMM` integer) — hidden helper for correct chronological
+  sort order (months don't sort correctly alphabetically)
+- `FiscalYear` (e.g. "2019-20") and `FiscalQuarter` (Q1 = Apr-Jun ... Q4 = Jan-Mar)
+  — matching EPFO's own reporting convention (India's fiscal year runs April to
+  March), since that's how the source data itself groups time, not the calendar year
+
+Marked as an official **Date Table** (Modeling → Mark as date table, using `Date`)
+so DAX time-intelligence functions work correctly against it.
 
 ## Relationships
 
-- `Calendar[Date]` (one) → `PayrollMonthlyRaw[MonthStart]` (many) — the core
-  relationship the whole star schema hangs off.
+- `Calendar[Date]` (1) → `PayrollMonthlyRaw[MonthStart]` (*) — single direction,
+  the one relationship the whole star schema hangs off.
+
+## Status: star schema complete
+
+Fact table (PayrollMonthlyRaw) + Date dimension (Calendar), properly related.
+Ready for Phase 3 (DAX measures).
 
 ## Why this shape
 
