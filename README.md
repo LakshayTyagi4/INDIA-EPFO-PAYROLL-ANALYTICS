@@ -4,7 +4,24 @@ A Power BI project analyzing India's monthly formal-workforce growth using EPFO'
 official "Provisional Estimate of Payroll" data — tracking new, exiting, and
 re-joined members by age band, month over month.
 
-**Data source:** https://www.epfo.gov.in/data-hub/ (monthly PDF releases, Jan 2021–present)
+**Data source:** https://www.epfo.gov.in/data-hub/ (monthly PDF releases, Jan 2021–present),
+extended back to 2019 via the Wayback Machine — see below.
+
+## Data coverage
+
+**66 monthly reports spanning July 2019 – September 2025** downloaded into `data/raw/`:
+- Jan 2021 – Sep 2025: complete except **July 2024**, confirmed unrecoverable from
+  every source tried (live site 403s; the only Wayback capture is the origin's WAF
+  error page, not the real document).
+- Jul–Dec 2019 and Jan–Oct 2020: 10 additional months recovered from the Wayback
+  Machine (the current site only goes back to Jan 2021) — each independently
+  verified by reading the report's own "Date" line inside the PDF, not assumed from
+  crawl metadata.
+
+Full methodology (exact source URLs, how the historical recovery works, the confirmed
+gap, and a live-site data-quality bug we found along the way) is documented in
+[`data/raw/README.md`](data/raw/README.md). Full per-file provenance is in
+[`data/raw/download_log.csv`](data/raw/download_log.csv).
 
 ## Folder structure
 
@@ -22,8 +39,8 @@ EPFO Project/
 
 ## Status
 
-- [ ] Phase 0 — sample PDFs downloaded, table structure confirmed
-- [ ] Phase 1 — bulk data acquisition + Power Query ingestion pipeline
+- [x] Phase 0 — sample PDFs downloaded, table structure confirmed
+- [x] Phase 1 — bulk + historical data acquisition (66 months, Jul 2019–Sep 2025)
 - [ ] Phase 2 — data model (star schema)
 - [ ] Phase 3 — DAX measures
 - [ ] Phase 4 — report pages + AI-augmented visuals
