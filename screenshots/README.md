@@ -1,3 +1,4 @@
 # Screenshots
 
-PNG/GIF exports of report pages — used in the root README and as LinkedIn/resume assets.
+PNG/GIF exports of each report page, referenced from the root README to document
+what the final dashboard looks like.

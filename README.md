@@ -36,7 +36,7 @@ EPFO Project/
 ├── power-query/        documented M code for the PDF ingestion pipeline
 ├── model/              star schema diagram / data model docs
 ├── dax/                documented DAX measure library
-├── screenshots/        report page exports (README + LinkedIn assets)
+├── screenshots/        report page exports for documentation
 └── EPFO_Payroll_Analytics.pbix
 ```
 
@@ -49,4 +49,4 @@ EPFO Project/
 - [ ] Phase 3 — DAX measures
 - [ ] Phase 4 — report pages + AI-augmented visuals
 - [ ] Phase 5 — polish (theme, tooltips, mobile layout)
-- [ ] Phase 6 — publish (GitHub, resume bullet, LinkedIn post)
+- [ ] Phase 6 — final documentation and release
