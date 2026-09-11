@@ -36,6 +36,7 @@ EPFO Project/
 ├── power-query/        documented M code for the PDF ingestion pipeline
 ├── model/              star schema diagram / data model docs
 ├── dax/                documented DAX measure library
+├── wireframes/         low-fidelity report page plan (drawn before the build)
 ├── screenshots/        report page exports for documentation
 └── EPFO_Payroll_Analytics.pbix
 ```
