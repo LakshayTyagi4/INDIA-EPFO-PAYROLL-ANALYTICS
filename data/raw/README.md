@@ -17,7 +17,7 @@ release date (e.g. `2024-01.pdf` covers January 2024, released ~20 Feb 2024).
 | 2021 | Jan–Dec (12) | — complete |
 | 2022 | Jan–Dec (12) | — complete |
 | 2023 | Jan–Dec (12) | — complete |
-| 2024 | Jan–Jun, Aug–Dec (11) | **Jul** (confirmed unrecoverable, see below) |
+| 2024 | Jan–Jun, Aug–Dec (11 raw files) | **Jul** missing as a standalone file, but see below — recovered anyway |
 | 2025 | Jan–Sep (9) | — complete through the latest available release |
 
 Full per-file provenance (exact source URL, HTTP status, byte size, recovery method)
@@ -40,30 +40,38 @@ was live at that moment — so the snapshot history became a proxy monthly archi
 Every recovered file's actual report date was independently verified by extracting
 its PDF text and checking the "Date" line, not assumed from the crawl timestamp.
 
-**Confirmed unrecoverable: July 2024.** The live source returns HTTP 403 for every
-filename variant tried. The Wayback Machine has exactly one capture of that file —
-but it captured the origin server's WAF **"Request Rejected"** error page (HTTP 200,
-but not the real document), not the actual PDF. Checked directly; there is no other
-archived copy. This is a genuine, documented gap, not an oversight.
+**July 2024 has no standalone file — but the data isn't actually missing.** The live
+source returns HTTP 403 for every filename variant tried, and the Wayback Machine's
+only capture of that file is the origin server's WAF "Request Rejected" error page,
+not the real document — so as a *standalone PDF*, it's genuinely unrecoverable.
+However, once the Phase 2 pipeline was built (see the modeling note below), it turned
+out `2025-05.pdf`'s cumulative fiscal-year table already includes a full row for
+Jul-2024 retrospectively — so the actual figures are present in the combined dataset
+even though no dedicated July 2024 PDF exists. Confirmed by direct inspection.
 
 **Data-quality note on the live source:** as of this writing, `epfo.gov.in/data-hub/`
 lists a "2026" entry dated 20 Oct 2025 whose download link actually points to
 `February-2021.pdf` — a labeling bug on EPFO's own site, not ours. The most recent
 *genuine* report currently published is September 2025.
 
-## Important modeling note for Phase 2 (not yet acted on)
+## Modeling note for Phase 2 — confirmed in practice
 
 Each report's page 1 table isn't just "this month's row" — it's **cumulative for the
 current fiscal year**, i.e. a single report typically shows every month from the
-start of its fiscal year (April) up to itself. That means a report we already have
-(e.g. `2021-01.pdf`, fiscal year 2020-21) likely already contains the *retrospective*
-monthly figures for several months we've listed as "missing" above (e.g. Jun/Jul/Sep/
-Nov/Dec 2020), since they fall in the same fiscal year. This hasn't been extracted or
-verified yet — it's a real opportunity to shrink the gap list further once we build
-the actual parsing pipeline in Phase 2, by parsing every report's *full* page-1 table
-(not just its own month's row) and reconciling overlaps, preferring the most recent
-revision of any given month where reports disagree (EPFO explicitly marks the data
-"provisional" and revises it in subsequent releases).
+start of its fiscal year (April) up to itself. This was a prediction when Phase 1
+finished; it's now confirmed: the Power Query pipeline parses every report's *full*
+page-1 table (not just its own month's row), combines all 66 files, and for any month
+that appears in more than one report (which is most of them, since fiscal years
+overlap across consecutive reports), keeps the **most recent report's figures**
+(sorted by filename descending, first occurrence wins — EPFO revises "provisional"
+data in later releases, so the newest version is the most accurate).
+
+This genuinely recovered data we didn't have as standalone files — most notably
+**July 2024**, which has no dedicated PDF but appears correctly via `2025-05.pdf`'s
+retrospective table. The final deduplicated table has ~76-77 unique months from
+July 2019 through September 2025 (one straggler file, `2019-09.pdf`, still fails
+extraction due to an unrelated column-layout quirk specific to that one file — see
+`power-query/PayrollMonthly_Raw.pq` for details).
 
 ## Reproducing this
 

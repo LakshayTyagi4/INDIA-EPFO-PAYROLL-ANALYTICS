@@ -10,13 +10,16 @@ extended back to 2019 via the Wayback Machine — see below.
 ## Data coverage
 
 **66 monthly reports spanning July 2019 – September 2025** downloaded into `data/raw/`:
-- Jan 2021 – Sep 2025: complete except **July 2024**, confirmed unrecoverable from
-  every source tried (live site 403s; the only Wayback capture is the origin's WAF
-  error page, not the real document).
+- Jan 2021 – Sep 2025: complete except **July 2024** has no standalone file (see
+  below — the data itself was recovered anyway).
 - Jul–Dec 2019 and Jan–Oct 2020: 10 additional months recovered from the Wayback
   Machine (the current site only goes back to Jan 2021) — each independently
   verified by reading the report's own "Date" line inside the PDF, not assumed from
   crawl metadata.
+- The Power Query pipeline (Phase 2) combines all 66 raw PDFs and, since each
+  report's Page 1 retroactively covers its whole fiscal year, ends up recovering
+  **July 2024's actual figures anyway** via a later report's cumulative table —
+  full explanation in `data/raw/README.md`.
 
 Full methodology (exact source URLs, how the historical recovery works, the confirmed
 gap, and a live-site data-quality bug we found along the way) is documented in
@@ -41,7 +44,8 @@ EPFO Project/
 
 - [x] Phase 0 — sample PDFs downloaded, table structure confirmed
 - [x] Phase 1 — bulk + historical data acquisition (66 months, Jul 2019–Sep 2025)
-- [ ] Phase 2 — data model (star schema)
+- [x] Phase 2a — Power Query pipeline: 66 PDFs → deduplicated, unpivoted fact table (456 rows)
+- [ ] Phase 2b — Date dimension + relationships (in progress)
 - [ ] Phase 3 — DAX measures
 - [ ] Phase 4 — report pages + AI-augmented visuals
 - [ ] Phase 5 — polish (theme, tooltips, mobile layout)
