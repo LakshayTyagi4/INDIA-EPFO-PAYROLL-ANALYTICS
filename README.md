@@ -47,7 +47,7 @@ EPFO Project/
 - [x] Phase 1 — bulk + historical data acquisition (66 months, Jul 2019–Sep 2025)
 - [x] Phase 2a — Power Query pipeline: 66 PDFs → deduplicated, unpivoted fact table (456 rows)
 - [x] Phase 2b — Date dimension (with fiscal-year columns) + relationship built
-- [ ] Phase 3 — DAX measures
+- [x] Phase 3 — DAX measures (time intelligence, rolling average, volatility, COVID-19 comparison)
 - [ ] Phase 4 — report pages + AI-augmented visuals
 - [ ] Phase 5 — polish (theme, tooltips, mobile layout)
 - [ ] Phase 6 — final documentation and release
