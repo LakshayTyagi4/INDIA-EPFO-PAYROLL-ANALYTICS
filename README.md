@@ -26,6 +26,18 @@ gap, and a live-site data-quality bug we found along the way) is documented in
 [`data/raw/README.md`](data/raw/README.md). Full per-file provenance is in
 [`data/raw/download_log.csv`](data/raw/download_log.csv).
 
+## Documentation
+
+- [`data/raw/README.md`](data/raw/README.md) — data sourcing & methodology (how
+  the 66 PDFs were acquired, the Wayback Machine recovery, known gaps)
+- [`power-query/README.md`](power-query/README.md) — the PDF-to-fact-table
+  pipeline in depth: every bug found along the way and why each fix works
+- [`model/README.md`](model/README.md) — the star schema (fact table, Date
+  dimension, relationship)
+- [`dax/README.md`](dax/README.md) — the full DAX measure library
+- [`wireframes/README.md`](wireframes/README.md) — the planned report layout,
+  sketched before the Power BI build
+
 ## Folder structure
 
 ```
