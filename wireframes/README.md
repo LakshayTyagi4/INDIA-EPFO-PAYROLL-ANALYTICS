@@ -49,7 +49,7 @@ Visual Details below instead.
 |---|---|---|
 | Primary | `#1E293B` | Headers (gradient to `#020617`), primary chart lines/bars, KPI accents, filter pills |
 | Accent | `#0E7490` (teal) | Secondary data series (decomposition tree children, donut 2nd slice, one small-multiples line) |
-| Secondary | `#6D28D9` (violet) | YoY-change indicators, one small-multiples line, donut 3rd slice |
+| Secondary | `#4C1D95` (deep violet) | YoY-change indicators, one small-multiples line, donut 3rd slice |
 | Positive | `#047857` (deep green) | Growth/gain indicators (waterfall gains, Recovery bar) |
 | COVID/Alert | `#991B1B` / `#B91C1C` (deep red) | COVID-era markers, waterfall drops, alert callouts |
 | Extra accent | `#9D174D` (deep rose) | Additional data-series variety (small multiples, scatter chart) |
