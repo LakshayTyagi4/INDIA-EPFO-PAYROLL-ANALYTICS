@@ -55,7 +55,7 @@ EPFO Project/
 └── EPFO_Payroll_Analytics.pbix
 ```
 
-## What's next
+## Future scope
 
 Right now the dashboard is built entirely on Page 1 of each report — the Net
 Payroll summary by age band. Every PDF actually contains four more full
@@ -80,7 +80,7 @@ own dimension and report page:
 I've already read through all four of these sections across 7 reports
 spanning 2019–2025 to work out how each one would actually get built — my
 implementation notes are in
-[`data/raw/README.md`](data/raw/README.md#planned-extensions-beyond-page-1).
+[`data/raw/README.md`](data/raw/README.md#future-scope-extensions-beyond-page-1).
 I haven't started building any of it yet — I'm keeping the current build
 focused on Page 1 until Phase 6 is done.
 

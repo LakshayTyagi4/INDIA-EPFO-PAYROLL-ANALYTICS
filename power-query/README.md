@@ -173,13 +173,13 @@ understood one-off (not the line-break bug, not the header-row-position issue
 detection for the sake of one file out of 66. I documented it rather than
 chasing it further — the same call I made for the July 2024 raw-file gap.
 
-## What's next for this pipeline: extending past Page 1
+## Future scope: extending this pipeline past Page 1
 
 `Pdf.Tables` sees every table across all of each report's pages (13 pages in
 the earliest reports, growing to 24 by 2025), but this pipeline only reads
 `"Table001 (Page 1)"`. The rest of each report — fiscal-year and monthly
 age-band detail, state-wise, industry-wise, and gender-wise breakdowns, full
-structural analysis in [`data/raw/README.md`](../data/raw/README.md#planned-extensions-beyond-page-1)
+structural analysis in [`data/raw/README.md`](../data/raw/README.md#future-scope-extensions-beyond-page-1)
 — is real, available data this same `Pdf.Tables` call already has access to;
 I'm just filtering it out at the `Tables{[Name = "Table001 (Page 1)"]}` step.
 Extending `fnExtractPage1` to also pull those tables is next on my list; I

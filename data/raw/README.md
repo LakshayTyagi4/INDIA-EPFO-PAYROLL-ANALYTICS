@@ -82,7 +82,7 @@ table's true minimum turns out to be **April 2019**, not July 2019. I end up wit
 `2019-09.pdf`, still fails extraction because of an unrelated column-layout quirk
 specific to that one file — see `power-query/PayrollMonthly_Raw.pq` for details).
 
-## Planned extensions beyond Page 1
+## Future scope: extensions beyond Page 1
 
 The dashboard today is built entirely on Page 1 of each report. Every PDF also
 contains four more full sections, and here's my plan for bringing each of them
