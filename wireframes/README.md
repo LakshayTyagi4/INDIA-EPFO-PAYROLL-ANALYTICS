@@ -1,9 +1,9 @@
 # Wireframes
 
-Plan for the report, sketched out **before** building it in Power BI —
+This is my plan for the report, sketched out **before** I built it in Power BI —
 [`report_wireframe.svg`](report_wireframe.svg).
 
-**One consolidated dashboard page**, organized into 5 clearly labeled sections:
+I laid it out as **one consolidated dashboard page**, organized into 6 clearly labeled sections:
 
 1. **Trend Overview** — main Net Payroll trend chart with a Rolling 3-Month
    Average overlay, a month-over-month waterfall, a Smart Narrative
@@ -26,20 +26,21 @@ Plan for the report, sketched out **before** building it in Power BI —
    `EstablishmentsFirstECR` field) and a ribbon chart showing how each age
    band's rank (by Net Payroll) shifts month to month
 
-One shared **Age Band filter** (multi-select pills) and **Fiscal Year slicer**
-sit at the top, applying to the whole page — no per-section duplicates.
+I put one shared **Age Band filter** (multi-select pills) and **Fiscal Year
+slicer** at the top, applying to the whole page, so I didn't need per-section
+duplicates.
 
-Typography follows a deliberate hierarchy: a big meta-title at the very top of
-this wireframe document, a normal-sized dashboard header inside the card
-(representing the actual Power BI page title), normal-sized section labels
-dividing the 5 groups above, and small chart captions within each visual.
-Every visual also carries a small italic annotation naming the actual DAX
-measure or column behind it — deliberately kept in the SVG since it's build
-guidance, not decoration.
+I set up the typography with a deliberate hierarchy: a big meta-title at the
+very top of this wireframe document, a normal-sized dashboard header inside
+the card (representing the actual Power BI page title), normal-sized section
+labels dividing the 5 groups above, and small chart captions within each
+visual. Every visual also carries a small italic annotation naming the actual
+DAX measure or column behind it — I kept that in the SVG deliberately, since
+it's build guidance, not decoration.
 
-The color legend and theme swatch are **not** drawn on the wireframe itself
-(a real dashboard shouldn't carry a key explaining its own colors) — see
-Visual Details below instead.
+I didn't draw the color legend and theme swatch on the wireframe itself (a
+real dashboard shouldn't carry a key explaining its own colors) — see Visual
+Details below instead.
 
 ## Visual details (Phase 5 reference)
 
@@ -56,9 +57,9 @@ Visual Details below instead.
 | Card background | `#F4F6FA` | KPI cards, callout boxes |
 | Body text | `#6B7280` | Chart captions and secondary text |
 
-All accent colors sit at a deliberately deep/muted tier so they read as one
-cohesive family against the near-black primary, rather than bright colors
-clashing against dark grey.
+I kept all the accent colors in a deliberately deep, muted tier so they'd
+read as one cohesive family against the near-black primary, rather than
+bright colors clashing against dark grey.
 
 **Visual conventions:**
 - **KPI card**: light background with a colored left accent bar (color is
@@ -71,6 +72,6 @@ clashing against dark grey.
   time-series charts
 - **Heatmap intensity**: darker cell = higher Net Payroll that month
 
-This is a plan to build from, not a screenshot of the finished report — if the
-actual build ends up diverging from it, update this file so it stays a
-reliable record of intent rather than going stale.
+This is a plan for me to build from, not a screenshot of the finished report
+— if the actual build ends up diverging from it, I'll update this file so it
+stays a reliable record of intent instead of going stale.
