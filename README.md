@@ -87,3 +87,6 @@ current build intentionally stays limited to Page 1 for now.
 - [ ] Phase 4 — report pages + AI-augmented visuals
 - [ ] Phase 5 — polish (theme, tooltips, mobile layout)
 - [ ] Phase 6 — final documentation and release
+- [ ] Phase 7 — modifications and additions (ongoing, post-release: the
+      Future Scope dimensions above, and any other changes that come up
+      after Phase 6)
