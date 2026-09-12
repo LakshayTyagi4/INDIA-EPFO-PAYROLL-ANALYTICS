@@ -21,6 +21,10 @@ Plan for the report, sketched out **before** building it in Power BI —
    bubble size = Net Payroll, colored by age band) and a view-toggle button
    group (a field-parameter pattern that swaps which measure drives the
    page's visuals without duplicating charts)
+6. **Establishment & Ranking Insights** — a combo chart (Net Payroll as a
+   line over New Establishments as bars — the first visual to use the
+   `EstablishmentsFirstECR` field) and a ribbon chart showing how each age
+   band's rank (by Net Payroll) shifts month to month
 
 One shared **Age Band filter** (multi-select pills) and **Fiscal Year slicer**
 sit at the top, applying to the whole page — no per-section duplicates.
