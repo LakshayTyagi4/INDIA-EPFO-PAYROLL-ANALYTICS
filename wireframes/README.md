@@ -30,8 +30,42 @@ this wireframe document, a normal-sized dashboard header inside the card
 (representing the actual Power BI page title), normal-sized section labels
 dividing the 5 groups above, and small chart captions within each visual.
 Every visual also carries a small italic annotation naming the actual DAX
-measure or column behind it, and the legend includes the report's color theme
-(slate grey primary, cyan/amber/emerald/red/pink accents) for Phase 5.
+measure or column behind it — deliberately kept in the SVG since it's build
+guidance, not decoration.
+
+The color legend and theme swatch are **not** drawn on the wireframe itself
+(a real dashboard shouldn't carry a key explaining its own colors) — see
+Visual Details below instead.
+
+## Visual details (Phase 5 reference)
+
+**Color theme:**
+
+| Role | Hex | Used for |
+|---|---|---|
+| Primary | `#1E293B` | Headers (gradient to `#020617`), primary chart lines/bars, KPI accents, filter pills |
+| Accent | `#0E7490` (teal) | Secondary data series (decomposition tree children, donut 2nd slice, one small-multiples line) |
+| Secondary | `#6D28D9` (violet) | YoY-change indicators, one small-multiples line, donut 3rd slice |
+| Positive | `#047857` (deep green) | Growth/gain indicators (waterfall gains, Recovery bar) |
+| COVID/Alert | `#991B1B` / `#B91C1C` (deep red) | COVID-era markers, waterfall drops, alert callouts |
+| Extra accent | `#9D174D` (deep rose) | Additional data-series variety (small multiples, scatter chart) |
+| Card background | `#F4F6FA` | KPI cards, callout boxes |
+| Body text | `#6B7280` | Chart captions and secondary text |
+
+All accent colors sit at a deliberately deep/muted tier so they read as one
+cohesive family against the near-black primary, rather than bright colors
+clashing against dark grey.
+
+**Visual conventions:**
+- **KPI card**: light background with a colored left accent bar (color is
+  decorative grouping, not semantic)
+- **Primary measure line**: solid, `#1E293B` — the main Net Payroll trend
+- **Rolling avg overlay**: dashed, secondary color — smoothing overlay on the
+  same chart
+- **Waterfall bars**: green = gain vs. prior month, red = drop
+- **Highlighted period**: translucent red rectangle marking Mar-Aug 2020 on
+  time-series charts
+- **Heatmap intensity**: darker cell = higher Net Payroll that month
 
 This is a plan to build from, not a screenshot of the finished report — if the
 actual build ends up diverging from it, update this file so it stays a
