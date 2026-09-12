@@ -1,0 +1,57 @@
+{
+  "name": "EPFO Slate",
+  "dataColors": [
+    "#1E293B",
+    "#0E7490",
+    "#4C1D95",
+    "#047857",
+    "#9D174D",
+    "#991B1B"
+  ],
+  "background": "#F8FAFC",
+  "foreground": "#1E293B",
+  "tableAccent": "#1E293B",
+  "good": "#047857",
+  "bad": "#991B1B",
+  "neutral": "#6B7280",
+  "maximum": "#1E293B",
+  "center": "#0E7490",
+  "minimum": "#F4F6FA",
+  "textClasses": {
+    "callout": {
+      "fontSize": 28,
+      "color": "#1E293B",
+      "fontFace": "Segoe UI Semibold"
+    },
+    "title": {
+      "fontSize": 12,
+      "color": "#1E293B",
+      "fontFace": "Segoe UI Semibold"
+    },
+    "header": {
+      "fontSize": 11,
+      "color": "#1E293B",
+      "fontFace": "Segoe UI"
+    },
+    "label": {
+      "fontSize": 9,
+      "color": "#6B7280",
+      "fontFace": "Segoe UI"
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [
+          {
+            "color": { "solid": { "color": "#F4F6FA" } },
+            "transparency": 0
+          }
+        ],
+        "border": [
+          { "show": false }
+        ]
+      }
+    }
+  }
+}
