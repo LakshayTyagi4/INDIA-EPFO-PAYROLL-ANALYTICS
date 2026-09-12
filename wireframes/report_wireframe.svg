@@ -32,7 +32,7 @@
     <rect x="299" y="44" width="275" height="52" rx="6" fill="#D8DEE8"/>
     <rect x="299" y="44" width="3" height="52" fill="#047857"/>
     <rect x="586" y="44" width="275" height="52" rx="6" fill="#D8DEE8"/>
-    <rect x="586" y="44" width="3" height="52" fill="#6D28D9"/>
+    <rect x="586" y="44" width="3" height="52" fill="#4C1D95"/>
     <rect x="873" y="44" width="275" height="52" rx="6" fill="#D8DEE8"/>
     <rect x="873" y="44" width="3" height="52" fill="#1E293B"/>
     <g font-size="9.5" fill="#6b7280">
@@ -44,14 +44,14 @@
       <rect x="329" y="72" width="70" height="14" rx="2" fill="#c9d3e2"/>
       <text x="311" y="92" font-size="6.5" font-style="italic" fill="#a7b0bd">[MoM % Change]</text>
       <text x="598" y="62">YoY Change</text>
-      <g transform="translate(598,72)"><polygon points="0,12 6,0 12,12" fill="#6D28D9"/></g>
+      <g transform="translate(598,72)"><polygon points="0,12 6,0 12,12" fill="#4C1D95"/></g>
       <rect x="616" y="72" width="70" height="14" rx="2" fill="#c9d3e2"/>
       <text x="598" y="92" font-size="6.5" font-style="italic" fill="#a7b0bd">[YoY % Change]</text>
       <text x="885" y="62">Age-Band Volatility</text>
       <text x="885" y="92" font-size="6.5" font-style="italic" fill="#a7b0bd">[AgeBand Volatility]</text>
       <g transform="translate(885,84)">
         <path d="M -20,0 A 20,20 0 0 1 20,0" fill="none" stroke="#e2e6ed" stroke-width="5"/>
-        <path d="M -20,0 A 20,20 0 0 1 6,-19" fill="none" stroke="#6D28D9" stroke-width="5" stroke-linecap="round"/>
+        <path d="M -20,0 A 20,20 0 0 1 6,-19" fill="none" stroke="#4C1D95" stroke-width="5" stroke-linecap="round"/>
       </g>
     </g>
 
@@ -82,7 +82,7 @@
     <polyline points="34,294 80,271 126,280 172,238 218,222 264,248 310,204 356,222 402,194 448,210 490,186"
       fill="none" stroke="#1E293B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
     <polyline points="34,288 80,280 126,275 172,262 218,252 264,249 310,236 356,230 402,219 448,213 490,202"
-      fill="none" stroke="#6D28D9" stroke-width="1.6" stroke-dasharray="5,3" stroke-linecap="round"/>
+      fill="none" stroke="#4C1D95" stroke-width="1.6" stroke-dasharray="5,3" stroke-linecap="round"/>
     <text x="24" y="312" font-size="8.5" fill="#6b7280">MoM contribution</text>
     <text x="420" y="312" font-size="6.5" font-style="italic" fill="#a7b0bd">Δ [Total Net Payroll] vs. [Net Payroll PM]</text>
     <line x1="34" y1="338" x2="490" y2="338" stroke="#d7deea"/>
@@ -138,11 +138,11 @@
       <text x="20" y="396">Jul-2025</text>
       <rect x="90" y="386" width="120" height="12" fill="#F1F5F9"/><rect x="90" y="386" width="88" height="12" fill="#1E293B"/><text x="216" y="396">2,104,360</text>
       <rect x="300" y="386" width="90" height="12" fill="#F1F5F9"/><rect x="300" y="386" width="55" height="12" fill="#047857"/><text x="396" y="396">10.5%</text>
-      <rect x="460" y="386" width="90" height="12" fill="#F1F5F9"/><rect x="460" y="386" width="72" height="12" fill="#6D28D9"/><text x="556" y="396">70.8%</text>
+      <rect x="460" y="386" width="90" height="12" fill="#F1F5F9"/><rect x="460" y="386" width="72" height="12" fill="#4C1D95"/><text x="556" y="396">70.8%</text>
       <text x="640" y="396">Jun-2025</text>
       <rect x="710" y="386" width="120" height="12" fill="#F1F5F9"/><rect x="710" y="386" width="80" height="12" fill="#1E293B"/><text x="836" y="396">1,904,535</text>
       <rect x="920" y="386" width="90" height="12" fill="#F1F5F9"/><rect x="920" y="386" width="66" height="12" fill="#047857"/><text x="1016" y="396">30.2%</text>
-      <rect x="1080" y="386" width="60" height="12" fill="#F1F5F9"/><rect x="1080" y="386" width="47" height="12" fill="#6D28D9"/>
+      <rect x="1080" y="386" width="60" height="12" fill="#F1F5F9"/><rect x="1080" y="386" width="47" height="12" fill="#4C1D95"/>
     </g>
 
     <!-- Section: Age-Band Breakdown -->
@@ -173,13 +173,13 @@
       <circle r="46" fill="none" stroke="#e2e6ed" stroke-width="18"/>
       <circle r="46" fill="none" stroke="#1E293B" stroke-width="18" stroke-dasharray="81 208"/>
       <circle r="46" fill="none" stroke="#0E7490" stroke-width="18" stroke-dasharray="61 228" stroke-dashoffset="-81"/>
-      <circle r="46" fill="none" stroke="#6D28D9" stroke-width="18" stroke-dasharray="51 238" stroke-dashoffset="-142"/>
+      <circle r="46" fill="none" stroke="#4C1D95" stroke-width="18" stroke-dasharray="51 238" stroke-dashoffset="-142"/>
       <circle r="46" fill="none" stroke="#9aa4b2" stroke-width="18" stroke-dasharray="96 193" stroke-dashoffset="-193"/>
     </g>
     <g font-size="8.5" fill="#6b7280">
       <rect x="728" y="514" width="8" height="8" fill="#1E293B"/><text x="740" y="521">22-25</text>
       <rect x="728" y="530" width="8" height="8" fill="#0E7490"/><text x="740" y="537">26-28</text>
-      <rect x="728" y="546" width="8" height="8" fill="#6D28D9"/><text x="740" y="553">29-35</text>
+      <rect x="728" y="546" width="8" height="8" fill="#4C1D95"/><text x="740" y="553">29-35</text>
       <rect x="728" y="562" width="8" height="8" fill="#9aa4b2"/><text x="740" y="569">others</text>
     </g>
 
@@ -207,7 +207,7 @@
       <text x="287" y="710">18-21</text>
 
       <rect x="380" y="656" width="170" height="58" rx="4" fill="#F8FAFC" stroke="#e5e9f0"/>
-      <polyline points="388,698 416,686 444,692 472,666 500,674 528,652" fill="none" stroke="#6D28D9" stroke-width="1.6"/>
+      <polyline points="388,698 416,686 444,692 472,666 500,674 528,652" fill="none" stroke="#4C1D95" stroke-width="1.6"/>
       <text x="465" y="710">22-25</text>
 
       <rect x="558" y="656" width="170" height="58" rx="4" fill="#F8FAFC" stroke="#e5e9f0"/>
@@ -250,7 +250,7 @@
     <text x="780" y="785" font-size="6.5" font-style="italic" fill="#B91C1C">Narrative built from the two COVID comparison measures</text>
     <line x1="784" y1="802" x2="1130" y2="802" stroke="#FECACA" stroke-width="3"/>
     <circle cx="830" cy="802" r="6" fill="#991B1B"/><text x="830" y="820" font-size="8" fill="#991B1B" text-anchor="middle">Lockdown</text>
-    <circle cx="957" cy="802" r="6" fill="#6D28D9"/><text x="957" y="820" font-size="8" fill="#991B1B" text-anchor="middle">Recovering</text>
+    <circle cx="957" cy="802" r="6" fill="#4C1D95"/><text x="957" y="820" font-size="8" fill="#991B1B" text-anchor="middle">Recovering</text>
     <circle cx="1084" cy="802" r="6" fill="#047857"/><text x="1084" y="820" font-size="8" fill="#991B1B" text-anchor="middle">Fully recovered</text>
     <circle cx="792" cy="838" r="6" fill="#991B1B"/><text x="792" y="842" font-size="7" fill="#ffffff" text-anchor="middle" font-weight="700">!</text>
     <rect x="806" y="834" width="300" height="7" rx="2" fill="#FECACA"/>
@@ -265,7 +265,7 @@
     <line x1="40" y1="996" x2="690" y2="996" stroke="#d7deea"/>
     <circle cx="120" cy="980" r="7" fill="#1E293B" opacity="0.75"/>
     <circle cx="210" cy="965" r="11" fill="#0E7490" opacity="0.75"/>
-    <circle cx="320" cy="948" r="9" fill="#6D28D9" opacity="0.75"/>
+    <circle cx="320" cy="948" r="9" fill="#4C1D95" opacity="0.75"/>
     <circle cx="420" cy="970" r="14" fill="#9D174D" opacity="0.75"/>
     <circle cx="520" cy="952" r="6" fill="#047857" opacity="0.75"/>
     <circle cx="600" cy="960" r="10" fill="#B91C1C" opacity="0.75"/>
@@ -302,7 +302,7 @@
     <g opacity="0.85">
       <path d="M 610,1080 C 660,1078 710,1098 760,1096 C 810,1094 860,1072 910,1070 C 960,1068 1010,1078 1030,1080 L 1030,1100 C 1010,1098 960,1088 910,1090 C 860,1092 810,1114 760,1116 C 710,1118 660,1098 610,1100 Z" fill="#1E293B"/>
       <path d="M 610,1100 C 660,1098 710,1118 760,1116 C 810,1114 860,1092 910,1090 C 960,1088 1010,1098 1030,1100 L 1030,1118 C 1010,1116 960,1108 910,1110 C 860,1112 810,1130 760,1132 C 710,1134 660,1116 610,1118 Z" fill="#0E7490"/>
-      <path d="M 610,1118 C 660,1116 710,1134 760,1132 C 810,1130 860,1112 910,1110 C 960,1108 1010,1116 1030,1118 L 1030,1134 C 1010,1132 960,1126 910,1128 C 860,1130 810,1144 760,1146 C 710,1148 660,1132 610,1134 Z" fill="#6D28D9"/>
+      <path d="M 610,1118 C 660,1116 710,1134 760,1132 C 810,1130 860,1112 910,1110 C 960,1108 1010,1116 1030,1118 L 1030,1134 C 1010,1132 960,1126 910,1128 C 860,1130 810,1144 760,1146 C 710,1148 660,1132 610,1134 Z" fill="#4C1D95"/>
       <path d="M 610,1134 C 660,1132 710,1148 760,1146 C 810,1144 860,1130 910,1128 C 960,1126 1010,1132 1030,1134 L 1030,1148 C 1010,1146 960,1142 910,1144 C 860,1146 810,1156 760,1158 C 710,1160 660,1146 610,1148 Z" fill="#047857"/>
     </g>
     <text x="600" y="1164" font-size="7.5" fill="#9aa4b2">Band thickness/order = relative rank of Net Payroll among age groups, month to month</text>
