@@ -53,29 +53,34 @@ EPFO Project/
 └── EPFO_Payroll_Analytics.pbix
 ```
 
-## Future scope (not in progress)
+## What's next
 
-The current model only extracts **Page 1** of each PDF. A structural deep-read
-of 7 sample reports spanning 2019-2025 (not just one file) found four more
-dimensions sitting untouched on the remaining ~92-97% of every report's pages
-— **Age-Band Detail** (two table variants), **State-Wise**, **Industry-Wise**,
-and **Gender-Wise** breakdowns — each with its own history, structure, and real
-extraction risks (some of these tables show genuine numeric corruption in
-`pdftotext` output that gets worse the more columns a report has accumulated).
+The current dashboard is built entirely on Page 1 of each report — the Net
+Payroll summary by age band. Every PDF actually contains four more full
+sections, and I plan to bring each of them into this project as its own
+dimension and report page:
 
-Ranked easiest → hardest to eventually add: **Gender-Wise** (cheapest — mostly
-clean data since ~May 2024, one confirmed absent-file gap to handle) →
-**Age-Band Detail** (straightforward with one robust parsing rule) →
-**State-Wise** (every sampled file shows some numeric corruption, worsening
-with column count — recommend a table-aware extractor over `pdftotext`) →
-**Industry-Wise** (hardest — a dynamic, non-exhaustive top-10-per-bucket list,
-not a fixed dimension).
+1. **Age-Band Detail** — the fiscal-year and monthly breakdown behind the
+   Page 1 summary (new / exited / re-joined subscribers, plus a second
+   related metric, Net new EPF Subscribers). The natural first extension,
+   since it's the same subject the dashboard already covers, just at full
+   depth instead of a summary.
+2. **Gender-Wise Analysis** — a new page tracking the Male / Female /
+   Transgender / Not Available split in formal-workforce growth over time —
+   a genuine diversity angle India's formal-employment data rarely gets
+   analyzed through.
+3. **State-Wise Map** — a geographic view of new subscribers by Indian
+   state, so the dashboard can show *where* formal-job growth is happening,
+   not just how much.
+4. **Industry-Wise Breakdown** — a sector-level page on which industries are
+   adding the most formal jobs each month.
 
-Full findings (per-dimension structure, exact failure modes found, and what a
-future Power Query extension would need to handle) are in
-[`data/raw/README.md`](data/raw/README.md#full-pdf-contents-future-scope-not-currently-parsed).
-This is a deliberately scoped-out next step, not something underway — the
-current build intentionally stays limited to Page 1 for now.
+I've already done a full structural read of all four sections across 7
+reports spanning 2019–2025 to plan out how each would actually get built —
+implementation notes are in
+[`data/raw/README.md`](data/raw/README.md#planned-extensions-beyond-page-1).
+Not started yet — the current build intentionally stays focused on Page 1
+until Phase 6 is done.
 
 ## Status
 

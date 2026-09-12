@@ -173,52 +173,49 @@ a third, different quirk), and fixing it would mean adding column-shift
 detection for the sake of one file out of 66. Documented rather than chased
 further, the same call made for the July 2024 raw-file gap.
 
-## Future scope: only Page 1 is parsed (not currently in progress)
+## What's next for this pipeline: extending past Page 1
 
-`Pdf.Tables` sees every table across all 19-24 pages of each report, but this
-pipeline only reads `"Table001 (Page 1)"`. The rest of each report (fiscal-year
-and monthly age-band detail, state-wise, industry-wise, and gender-wise
-breakdowns — full structural analysis in `data/raw/README.md`) is real,
-available data this same `Pdf.Tables` call already has access to; it's just
-filtered out at the `Tables{[Name = "Table001 (Page 1)"]}` step. Extending
-`fnExtractPage1` to also extract those tables is a deliberately scoped-out
-next step, not something underway — but a structural deep-read across 7
-sample reports (2019-2025) surfaced specific risks worth flagging before
-anyone starts:
+`Pdf.Tables` sees every table across all of each report's pages (13 pages in
+the earliest reports, growing to 24 by 2025), but this pipeline only reads
+`"Table001 (Page 1)"`. The rest of each report — fiscal-year and monthly
+age-band detail, state-wise, industry-wise, and gender-wise breakdowns, full
+structural analysis in [`data/raw/README.md`](../data/raw/README.md#planned-extensions-beyond-page-1)
+— is real, available data this same `Pdf.Tables` call already has access to;
+it's just filtered out at the `Tables{[Name = "Table001 (Page 1)"]}` step.
+Extending `fnExtractPage1` to also pull those tables is the plan; a
+structural deep-read across 7 sample reports (2019-2025) already scoped out
+what each extension will need from this pipeline specifically:
 
-- **None of the other 4 dimensions can reuse this pipeline's rename-by-
-  position trick as-is.** The bug this file documents above (exact-text
-  rename silently failing) has a *worse* cousin in the State-Wise table:
-  roughly half the sampled files show table **labels shifted onto a
-  different line than their own numeric values** — not a missing rename,
-  a genuine row/column misattribution that a naive parser would not error
-  on, it would just silently swap Tamil Nadu's numbers onto Maharashtra's
-  row. Any extension must extract labels and values as independent ordered
-  lists and zip by position, never assume same-line pairing.
-- **Page 1 itself becomes unreliable from ~2024 onward** — a confirmed
-  transcription error in `2024-08.pdf` and visible `pdftotext` corruption in
-  `2025-09.pdf` once its summary table grew past ~14 rows. Don't use Page 1
-  as a cross-check source for recent files without accounting for this.
-- **State-Wise and Industry-Wise get harder to parse over time, not
-  easier** — both tables keep appending columns every release (4 → 12
-  columns across the 7-file sample), and `pdftotext -layout`'s garbling
-  measurably worsens as column count grows, culminating in the 2025-09
-  State-Wise table where the section's own banner text gets interleaved
-  into data rows. A table-aware re-extraction (pdfplumber/camelot/Tabula
-  instead of `pdftotext`) is worth evaluating before investing in
-  text-position parsing at scale for these two.
-- **Gender-Wise is the cheapest of the four to add** — schema is fixed
-  (Male/Female/Transgender/Not Available × 6 age slabs), historical figures
-  are byte-identical across every report vintage that carries them (fix
-  once, reuse forever), and data has been reliably clean since ~May 2024.
-  One gap to handle: the section is confirmed **absent entirely** in at
-  least one sampled file (Aug 2020) — must be modeled as a valid state, not
-  a parse failure.
-- **Industry-Wise is the hardest** — it's a "top 10" list that rotates
-  release to release and differs by age bucket (up to 6 independently
-  refreshed lists per report), so it can't be modeled as a fixed dimension
-  table at all; it needs a sparse fact table over the union of every
-  industry name ever observed.
+- **Age-Band Detail (the fiscal-year/monthly detail behind Page 1) is the
+  most direct extension of this file's own logic.** It reuses the exact
+  same dynamic-header-search and try/otherwise isolation built above; the
+  one new wrinkle is that about half the sampled files have the detail
+  table's row labels sitting on a different line than their own numeric
+  values (not the rename-by-text bug above, but a related one) — so labels
+  and values need to be pulled as two independent ordered lists and zipped
+  by position, rather than assumed to share a line.
+- **State-Wise and Industry-Wise will need a different extraction approach
+  than the position-based rename this file relies on.** Every one of the 7
+  sampled files shows numeric corruption in the State-Wise table, getting
+  worse as the table gains columns each year (4 in 2019 → 12 by 2025): mild
+  character interleaving in the earliest files, a clean one-row label/value
+  offset through the middle years, and by 2025 the table's own banner text
+  bleeding into data rows. Industry-Wise adds a second complication on top:
+  its "top 10" industry list isn't a fixed dimension, it rotates release to
+  release and differs by age bucket. Both are workable, but rather than
+  reusing this file's text-position tricks, they're worth prototyping
+  against a table-aware extractor (pdfplumber/camelot/Tabula) instead of
+  `pdftotext -layout`, since the failure mode here is silent — a naive
+  parser wouldn't error, it would just swap one state's numbers onto
+  another's row.
+- **Gender-Wise is the one to build first once Age-Band Detail is done** —
+  its schema is fixed (Male/Female/Transgender/Not Available × 6 age
+  slabs), historical figures are byte-identical across every report vintage
+  that carries them (so they only need reconstructing once), and every
+  month has extracted cleanly since ~May 2024. The only thing this
+  pipeline's `try/otherwise` pattern needs to additionally tolerate: the
+  section is confirmed absent entirely from at least one sampled report
+  (Aug 2020) — that has to come back as a valid empty state, not an error.
 
 ## Reproducing / extending this
 
