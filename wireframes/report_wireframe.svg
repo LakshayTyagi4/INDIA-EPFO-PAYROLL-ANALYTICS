@@ -27,13 +27,13 @@
     <text x="20" y="25" font-size="17" font-weight="700" fill="#ffffff">India EPFO Formal Workforce Analytics — Executive Dashboard</text>
 
     <!-- KPI row -->
-    <rect x="12" y="44" width="275" height="52" rx="6" fill="#f4f6fa"/>
+    <rect x="12" y="44" width="275" height="52" rx="6" fill="#D8DEE8"/>
     <rect x="12" y="44" width="3" height="52" fill="#1E293B"/>
-    <rect x="299" y="44" width="275" height="52" rx="6" fill="#f4f6fa"/>
+    <rect x="299" y="44" width="275" height="52" rx="6" fill="#D8DEE8"/>
     <rect x="299" y="44" width="3" height="52" fill="#047857"/>
-    <rect x="586" y="44" width="275" height="52" rx="6" fill="#f4f6fa"/>
+    <rect x="586" y="44" width="275" height="52" rx="6" fill="#D8DEE8"/>
     <rect x="586" y="44" width="3" height="52" fill="#6D28D9"/>
-    <rect x="873" y="44" width="275" height="52" rx="6" fill="#f4f6fa"/>
+    <rect x="873" y="44" width="275" height="52" rx="6" fill="#D8DEE8"/>
     <rect x="873" y="44" width="3" height="52" fill="#1E293B"/>
     <g font-size="9.5" fill="#6b7280">
       <text x="24" y="62">Latest Month Net Payroll</text>
@@ -66,13 +66,13 @@
       <rect x="464" y="106" width="90" height="22" rx="11" fill="#1E293B"/><text x="509" y="120" fill="#ffffff" text-anchor="middle">More than 35</text>
     </g>
     <text x="564" y="120" font-size="7.5" fill="#9aa4b2">(all selected by default — click to isolate a band)</text>
-    <rect x="984" y="106" width="164" height="22" rx="11" fill="#e8edf5" stroke="#c9d3e2"/>
+    <rect x="984" y="106" width="164" height="22" rx="11" fill="#C7D0DC" stroke="#c9d3e2"/>
     <text x="1066" y="120" font-size="8" fill="#374151" text-anchor="middle">Fiscal Year ▾</text>
 
     <!-- Section: Trend Overview -->
     <text x="12" y="150" font-size="13.5" font-weight="700" fill="#1E293B">Trend Overview</text>
 
-    <rect x="12" y="160" width="500" height="184" rx="6" fill="#ffffff" stroke="#e5e9f0"/>
+    <rect x="12" y="160" width="500" height="184" rx="6" fill="#F8FAFC" stroke="#e5e9f0"/>
     <text x="24" y="176" font-size="9.5" fill="#6b7280">Net Payroll (solid) + Rolling 3M Avg (dashed)</text>
     <text x="24" y="187" font-size="6.5" font-style="italic" fill="#a7b0bd">[Total Net Payroll] · [Rolling 3M Avg Net Payroll] by Calendar[Date]</text>
     <line x1="34" y1="190" x2="34" y2="294" stroke="#d7deea"/>
@@ -95,7 +95,7 @@
       <rect x="394" y="284" width="30" height="10" fill="#047857"/><rect x="430" y="278" width="30" height="6" fill="#B91C1C"/>
     </g>
 
-    <rect x="524" y="160" width="312" height="80" rx="6" fill="#f4f6fa"/>
+    <rect x="524" y="160" width="312" height="80" rx="6" fill="#D8DEE8"/>
     <circle cx="540" cy="176" r="6" fill="#1E293B" opacity="0.85"/>
     <text x="540" y="180" font-size="7" fill="#ffffff" text-anchor="middle" font-weight="700">i</text>
     <text x="552" y="179" font-size="9.5" fill="#374151" font-weight="600">Smart Narrative</text>
@@ -104,7 +104,7 @@
     <rect x="536" y="212" width="264" height="7" rx="2" fill="#d7deea"/>
     <rect x="536" y="224" width="180" height="7" rx="2" fill="#d7deea"/>
 
-    <rect x="524" y="248" width="312" height="96" rx="6" fill="#ffffff" stroke="#e5e9f0"/>
+    <rect x="524" y="248" width="312" height="96" rx="6" fill="#F8FAFC" stroke="#e5e9f0"/>
     <text x="536" y="264" font-size="9" fill="#6b7280">Seasonality Heatmap — Month x Fiscal Year</text>
     <text x="536" y="275" font-size="6.5" font-style="italic" fill="#a7b0bd">[Total Net Payroll] by Calendar[MonthName] x Calendar[FiscalYear]</text>
     <g transform="translate(536,282)">
@@ -113,7 +113,7 @@
       <rect x="0" y="26" width="22" height="11" fill="#475569"/><rect x="23" y="26" width="22" height="11" fill="#1E293B"/><rect x="46" y="26" width="22" height="11" fill="#1E293B"/><rect x="69" y="26" width="22" height="11" fill="#020617"/><rect x="92" y="26" width="22" height="11" fill="#020617"/><rect x="115" y="26" width="22" height="11" fill="#020617"/><rect x="138" y="26" width="22" height="11" fill="#1E293B"/><rect x="161" y="26" width="22" height="11" fill="#e2e6ed"/><rect x="184" y="26" width="22" height="11" fill="#e2e6ed"/><rect x="207" y="26" width="22" height="11" fill="#e2e6ed"/><rect x="230" y="26" width="22" height="11" fill="#e2e6ed"/><rect x="253" y="26" width="22" height="11" fill="#e2e6ed"/>
     </g>
 
-    <rect x="848" y="160" width="300" height="184" rx="6" fill="#f4f6fa"/>
+    <rect x="848" y="160" width="300" height="184" rx="6" fill="#D8DEE8"/>
     <text x="860" y="178" font-size="9" fill="#6b7280">This Month vs. Last 2 Years</text>
     <line x1="868" y1="232" x2="1132" y2="232" stroke="#d7deea"/>
     <rect x="880" y="202" width="30" height="30" rx="2" fill="#c9d3e2"/>
@@ -133,7 +133,7 @@
     <!-- Section: Monthly Detail -->
     <text x="12" y="366" font-size="13.5" font-weight="700" fill="#1E293B">Monthly Detail</text>
     <text x="120" y="366" font-size="6.5" font-style="italic" fill="#a7b0bd">Matrix — Month x Net Payroll / MoM % / YoY %, with in-cell data bars</text>
-    <rect x="12" y="378" width="1136" height="30" rx="6" fill="#ffffff" stroke="#e5e9f0"/>
+    <rect x="12" y="378" width="1136" height="30" rx="6" fill="#F8FAFC" stroke="#e5e9f0"/>
     <g font-size="7.5" fill="#374151">
       <text x="20" y="396">Jul-2025</text>
       <rect x="90" y="386" width="120" height="12" fill="#F1F5F9"/><rect x="90" y="386" width="88" height="12" fill="#1E293B"/><text x="216" y="396">2,104,360</text>
@@ -148,7 +148,7 @@
     <!-- Section: Age-Band Breakdown -->
     <text x="12" y="432" font-size="13.5" font-weight="700" fill="#1E293B">Age-Band Breakdown</text>
 
-    <rect x="12" y="442" width="275" height="180" rx="6" fill="#ffffff" stroke="#e5e9f0"/>
+    <rect x="12" y="442" width="275" height="180" rx="6" fill="#F8FAFC" stroke="#e5e9f0"/>
     <text x="24" y="460" font-size="9.5" fill="#6b7280">Decomposition Tree</text>
     <g stroke="#CBD5E1" stroke-width="1.6" fill="none">
       <line x1="150" y1="490" x2="80" y2="542"/><line x1="150" y1="490" x2="150" y2="542"/><line x1="150" y1="490" x2="220" y2="542"/>
@@ -157,7 +157,7 @@
     <text x="150" y="574" font-size="9" fill="#9aa4b2" text-anchor="middle">Total → Age Band → Month</text>
     <text x="150" y="602" font-size="6.5" font-style="italic" fill="#a7b0bd" text-anchor="middle">[Total Net Payroll]</text>
 
-    <rect x="299" y="442" width="275" height="180" rx="6" fill="#ffffff" stroke="#e5e9f0"/>
+    <rect x="299" y="442" width="275" height="180" rx="6" fill="#F8FAFC" stroke="#e5e9f0"/>
     <text x="311" y="460" font-size="9.5" fill="#6b7280">Net Payroll by Age Band</text>
     <text x="311" y="472" font-size="6.5" font-style="italic" fill="#a7b0bd">[Total Net Payroll] by AgeBand</text>
     <line x1="315" y1="598" x2="562" y2="598" stroke="#d7deea"/>
@@ -166,7 +166,7 @@
       <rect x="442" y="524" width="28" height="74" rx="2"/><rect x="482" y="547" width="28" height="51" rx="2"/><rect x="522" y="502" width="28" height="96" rx="2"/>
     </g>
 
-    <rect x="586" y="442" width="275" height="180" rx="6" fill="#ffffff" stroke="#e5e9f0"/>
+    <rect x="586" y="442" width="275" height="180" rx="6" fill="#F8FAFC" stroke="#e5e9f0"/>
     <text x="598" y="460" font-size="9.5" fill="#6b7280">Share of Total</text>
     <text x="598" y="472" font-size="6.5" font-style="italic" fill="#a7b0bd">[Total Net Payroll] % of grand total, by AgeBand</text>
     <g transform="translate(650,542)">
@@ -183,7 +183,7 @@
       <rect x="728" y="562" width="8" height="8" fill="#9aa4b2"/><text x="740" y="569">others</text>
     </g>
 
-    <rect x="873" y="442" width="275" height="180" rx="6" fill="#f4f6fa"/>
+    <rect x="873" y="442" width="275" height="180" rx="6" fill="#D8DEE8"/>
     <text x="885" y="460" font-size="9.5" fill="#374151" font-weight="600">Key Influencers</text>
     <text x="885" y="474" font-size="8.5" fill="#6b7280">"What drives net growth?"</text>
     <g fill="#CBD5E1">
@@ -194,31 +194,31 @@
     <text x="885" y="602" font-size="8" fill="#9aa4b2">AI-generated, ranked by statistical influence</text>
 
     <!-- small-multiples sparklines, one per age band -->
-    <rect x="12" y="632" width="1136" height="94" rx="6" fill="#f4f6fa"/>
+    <rect x="12" y="632" width="1136" height="94" rx="6" fill="#D8DEE8"/>
     <text x="24" y="648" font-size="9.5" fill="#374151" font-weight="600">Trend by Age Band — small multiples</text>
     <text x="260" y="648" font-size="6.5" font-style="italic" fill="#a7b0bd">[Total Net Payroll] by Calendar[Date], one chart per AgeBand</text>
     <g font-size="7.5" fill="#9aa4b2" text-anchor="middle">
-      <rect x="24" y="656" width="170" height="58" rx="4" fill="#ffffff" stroke="#e5e9f0"/>
+      <rect x="24" y="656" width="170" height="58" rx="4" fill="#F8FAFC" stroke="#e5e9f0"/>
       <polyline points="32,702 60,694 88,698 116,684 144,688 172,672" fill="none" stroke="#1E293B" stroke-width="1.6"/>
       <text x="109" y="710">Less than 18</text>
 
-      <rect x="202" y="656" width="170" height="58" rx="4" fill="#ffffff" stroke="#e5e9f0"/>
+      <rect x="202" y="656" width="170" height="58" rx="4" fill="#F8FAFC" stroke="#e5e9f0"/>
       <polyline points="210,700 238,690 266,694 294,672 322,678 350,656" fill="none" stroke="#0E7490" stroke-width="1.6"/>
       <text x="287" y="710">18-21</text>
 
-      <rect x="380" y="656" width="170" height="58" rx="4" fill="#ffffff" stroke="#e5e9f0"/>
+      <rect x="380" y="656" width="170" height="58" rx="4" fill="#F8FAFC" stroke="#e5e9f0"/>
       <polyline points="388,698 416,686 444,692 472,666 500,674 528,652" fill="none" stroke="#6D28D9" stroke-width="1.6"/>
       <text x="465" y="710">22-25</text>
 
-      <rect x="558" y="656" width="170" height="58" rx="4" fill="#ffffff" stroke="#e5e9f0"/>
+      <rect x="558" y="656" width="170" height="58" rx="4" fill="#F8FAFC" stroke="#e5e9f0"/>
       <polyline points="566,702 594,692 622,696 650,678 678,684 706,664" fill="none" stroke="#9D174D" stroke-width="1.6"/>
       <text x="643" y="710">26-28</text>
 
-      <rect x="736" y="656" width="170" height="58" rx="4" fill="#ffffff" stroke="#e5e9f0"/>
+      <rect x="736" y="656" width="170" height="58" rx="4" fill="#F8FAFC" stroke="#e5e9f0"/>
       <polyline points="744,700 772,688 800,692 828,670 856,676 884,658" fill="none" stroke="#047857" stroke-width="1.6"/>
       <text x="821" y="710">29-35</text>
 
-      <rect x="914" y="656" width="222" height="58" rx="4" fill="#ffffff" stroke="#e5e9f0"/>
+      <rect x="914" y="656" width="222" height="58" rx="4" fill="#F8FAFC" stroke="#e5e9f0"/>
       <polyline points="924,702 958,690 992,694 1026,674 1060,680 1094,660" fill="none" stroke="#B91C1C" stroke-width="1.6"/>
       <text x="1025" y="710">More than 35</text>
     </g>
@@ -226,7 +226,7 @@
     <!-- Section: COVID-19 Impact -->
     <text x="12" y="748" font-size="13.5" font-weight="700" fill="#1E293B">COVID-19 Impact</text>
 
-    <rect x="12" y="758" width="366" height="102" rx="6" fill="#ffffff" stroke="#e5e9f0"/>
+    <rect x="12" y="758" width="366" height="102" rx="6" fill="#F8FAFC" stroke="#e5e9f0"/>
     <text x="24" y="774" font-size="9.5" fill="#6b7280">Avg Monthly Net Payroll — before/during/after</text>
     <text x="24" y="785" font-size="6.5" font-style="italic" fill="#a7b0bd">[Pre-COVID Avg Monthly Net Payroll] · [COVID Era Avg Monthly Net Payroll]</text>
     <line x1="34" y1="848" x2="366" y2="848" stroke="#d7deea"/>
@@ -235,7 +235,7 @@
     <text x="204" y="822" font-size="8.5" fill="#991B1B" text-anchor="middle" font-weight="700">-84%</text>
     <rect x="282" y="782" width="56" height="66" rx="3" fill="#047857"/><text x="310" y="860" font-size="8.5" fill="#6b7280" text-anchor="middle">Recovery</text>
 
-    <rect x="390" y="758" width="366" height="102" rx="6" fill="#ffffff" stroke="#e5e9f0"/>
+    <rect x="390" y="758" width="366" height="102" rx="6" fill="#F8FAFC" stroke="#e5e9f0"/>
     <text x="402" y="774" font-size="9.5" fill="#6b7280">Trend, zoomed to 2019-2021</text>
     <text x="402" y="785" font-size="6.5" font-style="italic" fill="#a7b0bd">[Total Net Payroll], highlight = Calendar[IsCovidEra]</text>
     <rect x="530" y="786" width="80" height="60" fill="#F87171" opacity="0.22"/>
@@ -258,7 +258,7 @@
     <!-- Section: Advanced Analysis -->
     <text x="12" y="884" font-size="13.5" font-weight="700" fill="#1E293B">Advanced Analysis</text>
 
-    <rect x="12" y="894" width="700" height="112" rx="6" fill="#ffffff" stroke="#e5e9f0"/>
+    <rect x="12" y="894" width="700" height="112" rx="6" fill="#F8FAFC" stroke="#e5e9f0"/>
     <text x="24" y="910" font-size="9.5" fill="#6b7280">MoM % vs. YoY % by Month, bubble size = Net Payroll</text>
     <text x="24" y="921" font-size="6.5" font-style="italic" fill="#a7b0bd">[MoM % Change] x [YoY % Change], size = [Total Net Payroll], colored by AgeBand</text>
     <line x1="40" y1="936" x2="40" y2="996" stroke="#d7deea"/>
@@ -270,19 +270,19 @@
     <circle cx="520" cy="952" r="6" fill="#047857" opacity="0.75"/>
     <circle cx="600" cy="960" r="10" fill="#B91C1C" opacity="0.75"/>
 
-    <rect x="724" y="894" width="424" height="112" rx="6" fill="#f4f6fa"/>
+    <rect x="724" y="894" width="424" height="112" rx="6" fill="#D8DEE8"/>
     <text x="736" y="910" font-size="9.5" fill="#374151" font-weight="600">View toggle (field parameter)</text>
     <text x="736" y="921" font-size="6.5" font-style="italic" fill="#a7b0bd">Swaps the measure driving every visual on this page</text>
     <rect x="736" y="930" width="130" height="24" rx="12" fill="#1E293B"/><text x="801" y="946" font-size="8" fill="#ffffff" text-anchor="middle">Net Payroll</text>
-    <rect x="874" y="930" width="110" height="24" rx="12" fill="#e8edf5" stroke="#c9d3e2"/><text x="929" y="946" font-size="8" fill="#374151" text-anchor="middle">MoM %</text>
-    <rect x="992" y="930" width="110" height="24" rx="12" fill="#e8edf5" stroke="#c9d3e2"/><text x="1047" y="946" font-size="8" fill="#374151" text-anchor="middle">YoY %</text>
+    <rect x="874" y="930" width="110" height="24" rx="12" fill="#C7D0DC" stroke="#c9d3e2"/><text x="929" y="946" font-size="8" fill="#374151" text-anchor="middle">MoM %</text>
+    <rect x="992" y="930" width="110" height="24" rx="12" fill="#C7D0DC" stroke="#c9d3e2"/><text x="1047" y="946" font-size="8" fill="#374151" text-anchor="middle">YoY %</text>
     <text x="736" y="976" font-size="7.5" fill="#6b7280">Selected view highlights in blue; charts above re-bind</text>
     <text x="736" y="988" font-size="7.5" fill="#6b7280">to whichever measure is toggled on, without duplicating visuals.</text>
 
     <!-- Section: Establishment & Ranking Insights -->
     <text x="12" y="1022" font-size="13.5" font-weight="700" fill="#1E293B">Establishment &amp; Ranking Insights</text>
 
-    <rect x="12" y="1032" width="560" height="140" rx="6" fill="#ffffff" stroke="#e5e9f0"/>
+    <rect x="12" y="1032" width="560" height="140" rx="6" fill="#F8FAFC" stroke="#e5e9f0"/>
     <text x="24" y="1048" font-size="9.5" fill="#6b7280">Net Payroll (line) vs. New Establishments (bars)</text>
     <text x="24" y="1059" font-size="6.5" font-style="italic" fill="#a7b0bd">[Total Net Payroll] · SUM(PayrollMonthlyRaw[EstablishmentsFirstECR])</text>
     <line x1="34" y1="1064" x2="34" y2="1152" stroke="#d7deea"/>
@@ -296,7 +296,7 @@
     <polyline points="57,1128 97,1116 137,1122 177,1100 217,1108 257,1086 297,1094 337,1076 377,1082 417,1064 457,1072 497,1058"
       fill="none" stroke="#1E293B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 
-    <rect x="588" y="1032" width="560" height="140" rx="6" fill="#ffffff" stroke="#e5e9f0"/>
+    <rect x="588" y="1032" width="560" height="140" rx="6" fill="#F8FAFC" stroke="#e5e9f0"/>
     <text x="600" y="1048" font-size="9.5" fill="#6b7280">Age-Band Rank Over Time (ribbon)</text>
     <text x="600" y="1059" font-size="6.5" font-style="italic" fill="#a7b0bd">RANKX(ALL(PayrollMonthlyRaw[AgeBand]), [Total Net Payroll]) by Calendar[Date]</text>
     <g opacity="0.85">
