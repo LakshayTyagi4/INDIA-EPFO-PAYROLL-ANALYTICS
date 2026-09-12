@@ -73,6 +73,24 @@ July 2019 through September 2025 (one straggler file, `2019-09.pdf`, still fails
 extraction due to an unrelated column-layout quirk specific to that one file — see
 `power-query/PayrollMonthly_Raw.pq` for details).
 
+## Full PDF contents (future scope, not currently parsed)
+
+Only Page 1 of each PDF is extracted today. Each report is actually 19-24
+pages; the rest is real, untouched data — confirmed by reading a full report
+page-by-page:
+
+- Pages 2-13: age-band breakdowns of New/Exited/Re-joined subscribers, by
+  fiscal year and by individual month
+- Pages 14-19: **state-wise** new-subscriber breakdown by age bucket (one
+  page per bucket)
+- Pages 20-21: **industry-sector-wise** new-subscriber breakdown by age bucket
+- Pages 22-24: **gender-wise** breakdown (Male/Female/Transgender/Not
+  Available) by age slab
+
+See the main [README.md](../README.md)'s "Future scope" section for what a
+later iteration covering this could look like. Not in progress — the current
+pipeline deliberately stays scoped to Page 1.
+
 ## Reproducing this
 
 `download_log.csv` records the exact URL and method used for every file, so the

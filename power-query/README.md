@@ -173,6 +173,18 @@ a third, different quirk), and fixing it would mean adding column-shift
 detection for the sake of one file out of 66. Documented rather than chased
 further, the same call made for the July 2024 raw-file gap.
 
+## Future scope: only Page 1 is parsed (not currently in progress)
+
+`Pdf.Tables` sees every table across all 19-24 pages of each report, but this
+pipeline only reads `"Table001 (Page 1)"`. The rest of each report (fiscal-year
+and monthly age-band detail, state-wise, industry-wise, and gender-wise
+breakdowns — see `data/raw/README.md`) is real, available data this same
+`Pdf.Tables` call already has access to; it's just filtered out at the
+`Tables{[Name = "Table001 (Page 1)"]}` step. Extending `fnExtractPage1` to also
+extract those tables (each would need its own header-detection and shaping
+logic, since their layouts differ from Page 1's) is a deliberately scoped-out
+next step, not something underway.
+
 ## Reproducing / extending this
 
 Both `.pq` files are meant to be pasted directly into a Power BI Desktop
