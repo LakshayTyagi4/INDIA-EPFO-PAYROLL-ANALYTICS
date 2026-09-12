@@ -178,12 +178,47 @@ further, the same call made for the July 2024 raw-file gap.
 `Pdf.Tables` sees every table across all 19-24 pages of each report, but this
 pipeline only reads `"Table001 (Page 1)"`. The rest of each report (fiscal-year
 and monthly age-band detail, state-wise, industry-wise, and gender-wise
-breakdowns — see `data/raw/README.md`) is real, available data this same
-`Pdf.Tables` call already has access to; it's just filtered out at the
-`Tables{[Name = "Table001 (Page 1)"]}` step. Extending `fnExtractPage1` to also
-extract those tables (each would need its own header-detection and shaping
-logic, since their layouts differ from Page 1's) is a deliberately scoped-out
-next step, not something underway.
+breakdowns — full structural analysis in `data/raw/README.md`) is real,
+available data this same `Pdf.Tables` call already has access to; it's just
+filtered out at the `Tables{[Name = "Table001 (Page 1)"]}` step. Extending
+`fnExtractPage1` to also extract those tables is a deliberately scoped-out
+next step, not something underway — but a structural deep-read across 7
+sample reports (2019-2025) surfaced specific risks worth flagging before
+anyone starts:
+
+- **None of the other 4 dimensions can reuse this pipeline's rename-by-
+  position trick as-is.** The bug this file documents above (exact-text
+  rename silently failing) has a *worse* cousin in the State-Wise table:
+  roughly half the sampled files show table **labels shifted onto a
+  different line than their own numeric values** — not a missing rename,
+  a genuine row/column misattribution that a naive parser would not error
+  on, it would just silently swap Tamil Nadu's numbers onto Maharashtra's
+  row. Any extension must extract labels and values as independent ordered
+  lists and zip by position, never assume same-line pairing.
+- **Page 1 itself becomes unreliable from ~2024 onward** — a confirmed
+  transcription error in `2024-08.pdf` and visible `pdftotext` corruption in
+  `2025-09.pdf` once its summary table grew past ~14 rows. Don't use Page 1
+  as a cross-check source for recent files without accounting for this.
+- **State-Wise and Industry-Wise get harder to parse over time, not
+  easier** — both tables keep appending columns every release (4 → 12
+  columns across the 7-file sample), and `pdftotext -layout`'s garbling
+  measurably worsens as column count grows, culminating in the 2025-09
+  State-Wise table where the section's own banner text gets interleaved
+  into data rows. A table-aware re-extraction (pdfplumber/camelot/Tabula
+  instead of `pdftotext`) is worth evaluating before investing in
+  text-position parsing at scale for these two.
+- **Gender-Wise is the cheapest of the four to add** — schema is fixed
+  (Male/Female/Transgender/Not Available × 6 age slabs), historical figures
+  are byte-identical across every report vintage that carries them (fix
+  once, reuse forever), and data has been reliably clean since ~May 2024.
+  One gap to handle: the section is confirmed **absent entirely** in at
+  least one sampled file (Aug 2020) — must be modeled as a valid state, not
+  a parse failure.
+- **Industry-Wise is the hardest** — it's a "top 10" list that rotates
+  release to release and differs by age bucket (up to 6 independently
+  refreshed lists per report), so it can't be modeled as a fixed dimension
+  table at all; it needs a sparse fact table over the union of every
+  industry name ever observed.
 
 ## Reproducing / extending this
 

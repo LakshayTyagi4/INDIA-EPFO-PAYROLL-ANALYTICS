@@ -55,27 +55,27 @@ EPFO Project/
 
 ## Future scope (not in progress)
 
-The current model only extracts **Page 1** of each PDF — the Net Payroll by
-age-band summary table. Every report is actually 19-24 pages, and the rest is
-untouched. Confirmed by reading a full report page-by-page:
+The current model only extracts **Page 1** of each PDF. A structural deep-read
+of 7 sample reports spanning 2019-2025 (not just one file) found four more
+dimensions sitting untouched on the remaining ~92-97% of every report's pages
+— **Age-Band Detail** (two table variants), **State-Wise**, **Industry-Wise**,
+and **Gender-Wise** breakdowns — each with its own history, structure, and real
+extraction risks (some of these tables show genuine numeric corruption in
+`pdftotext` output that gets worse the more columns a report has accumulated).
 
-- **Pages 2-13**: age-band breakdowns of New / Exited / Re-joined subscribers,
-  by fiscal year *and* by individual month (two related table variants)
-- **Pages 14-19**: **state-wise** breakdown of new subscribers by age bucket
-  (one page per age bucket) — a genuine geographic dimension, across fiscal
-  years and current-year months
-- **Pages 20-21**: **industry-sector-wise** breakdown of new subscribers by
-  age bucket, same time cross-tabulation — a genuine industry dimension
-- **Pages 22-24**: **gender-wise** breakdown (Male / Female / Transgender /
-  Not Available) of new / exited / re-joined subscribers by age slab, by
-  fiscal year and month
+Ranked easiest → hardest to eventually add: **Gender-Wise** (cheapest — mostly
+clean data since ~May 2024, one confirmed absent-file gap to handle) →
+**Age-Band Detail** (straightforward with one robust parsing rule) →
+**State-Wise** (every sampled file shows some numeric corruption, worsening
+with column count — recommend a table-aware extractor over `pdftotext`) →
+**Industry-Wise** (hardest — a dynamic, non-exhaustive top-10-per-bucket list,
+not a fixed dimension).
 
-None of this is parsed or modeled today. A future iteration could add State,
-Industry, and Gender as real dimensions — enabling a state-level map, an
-industry-sector breakdown, and a gender-diversity-in-formal-employment view —
-turning the current single-fact-table model into a genuinely larger star
-schema. This is a deliberately scoped-out next step, not something underway;
-the current build intentionally stays limited to Page 1 for now.
+Full findings (per-dimension structure, exact failure modes found, and what a
+future Power Query extension would need to handle) are in
+[`data/raw/README.md`](data/raw/README.md#full-pdf-contents-future-scope-not-currently-parsed).
+This is a deliberately scoped-out next step, not something underway — the
+current build intentionally stays limited to Page 1 for now.
 
 ## Status
 
