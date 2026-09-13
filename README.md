@@ -1,5 +1,7 @@
 # India EPFO Formal Workforce Analytics
 
+![EPFO Payroll Analytics](theme/logo.svg)
+
 I built this Power BI project to analyze India's monthly formal-workforce growth
 using EPFO's official "Provisional Estimate of Payroll" data — tracking new,
 exiting, and re-joined members by age band, month over month.
