@@ -3,6 +3,20 @@
 This is my plan for the report, sketched out **before** I built it in Power BI —
 [`report_wireframe.svg`](report_wireframe.svg).
 
+## Page structure: a landing page, then the dashboard pages
+
+The report has an **Action Center** page as the entry point — a plain title
+plus a list of buttons, one per dashboard page, that jump straight there. Right
+now that's a single button ("Overview"), since Overview is the only dashboard
+page built so far, but the page is built to grow: as I add the Age-Band
+Detail, Gender-Wise, State-Wise Map, and Industry-Wise pages from the
+[Future scope](../README.md#future-scope), each one gets its own button here
+rather than needing a redesign. The wireframe below is for the dashboard
+content itself (the Overview page) — the landing page is simple enough not to
+need its own mockup.
+
+## The Overview page
+
 I laid it out as **one consolidated dashboard page**, organized into 6 clearly labeled sections:
 
 1. **Trend Overview** — main Net Payroll trend chart with a Rolling 3-Month
