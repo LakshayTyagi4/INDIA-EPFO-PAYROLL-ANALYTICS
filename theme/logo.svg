@@ -1,0 +1,6 @@
+<svg viewBox="0 0 240 40" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+  <rect x="0" y="4" width="32" height="32" rx="7" fill="#1E293B"/>
+  <text x="16" y="26" font-size="15" font-weight="800" fill="#ffffff" text-anchor="middle">LT</text>
+  <text x="42" y="18" font-size="11" font-weight="700" fill="#1E293B">EPFO Payroll Analytics</text>
+  <text x="42" y="31" font-size="9" fill="#6B7280">&#169; 2026 Lakshay Tyagi</text>
+</svg>
