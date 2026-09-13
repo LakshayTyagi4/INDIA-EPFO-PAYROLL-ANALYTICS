@@ -7,15 +7,15 @@ This is my plan for the report, sketched out **before** I built it in Power BI �
 
 The report has an **Action Center** page as the entry point — a plain title
 plus a list of buttons, one per dashboard page, that jump straight there. Right
-now that's a single button ("Overview"), since Overview is the only dashboard
-page built so far, but the page is built to grow: as I add the Age-Band
-Detail, Gender-Wise, State-Wise Map, and Industry-Wise pages from the
+now that's a single button ("Overall Summary"), since Overall Summary is the
+only dashboard page built so far, but the page is built to grow: as I add the
+Age-Band Detail, Gender-Wise, State-Wise Map, and Industry-Wise pages from the
 [Future scope](../README.md#future-scope), each one gets its own button here
-rather than needing a redesign. The wireframe below is for the dashboard
-content itself (the Overview page) — the landing page is simple enough not to
-need its own mockup.
+rather than needing a redesign. Both pages are sketched in
+[`report_wireframe.svg`](report_wireframe.svg) — Page 1 is Action Center,
+Page 2 is the dashboard content below.
 
-## The Overview page
+## The Overall Summary page
 
 I laid it out as **one consolidated dashboard page**, organized into 6 clearly labeled sections:
 
