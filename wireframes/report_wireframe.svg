@@ -49,16 +49,38 @@
 
     <line x1="0" y1="75" x2="1160" y2="75" stroke="#1E293B"/>
 
-    <!-- Filter card: dark panel holding the Age Band slicer -->
+    <!-- Filter card: dark panel holding the Age Band slicer + Fiscal Year slicer -->
     <rect x="0" y="85" width="1160" height="55" rx="8" fill="#333333"/>
     <g font-size="8.5">
-      <rect x="15" y="95" width="180" height="35" rx="4" fill="#F8FAFC" stroke="#94A3B8"/><text x="105" y="116" fill="#1E293B" text-anchor="middle">Less than 18</text>
-      <rect x="205" y="95" width="180" height="35" rx="4" fill="#F8FAFC" stroke="#94A3B8"/><text x="295" y="116" fill="#1E293B" text-anchor="middle">18-21</text>
-      <rect x="395" y="95" width="180" height="35" rx="4" fill="#F8FAFC" stroke="#94A3B8"/><text x="485" y="116" fill="#1E293B" text-anchor="middle">22-25</text>
-      <rect x="585" y="95" width="180" height="35" rx="4" fill="#F8FAFC" stroke="#94A3B8"/><text x="675" y="116" fill="#1E293B" text-anchor="middle">26-28</text>
-      <rect x="775" y="95" width="180" height="35" rx="4" fill="#F8FAFC" stroke="#94A3B8"/><text x="865" y="116" fill="#1E293B" text-anchor="middle">29-35</text>
-      <rect x="965" y="95" width="180" height="35" rx="4" fill="#F8FAFC" stroke="#94A3B8"/><text x="1055" y="116" fill="#1E293B" text-anchor="middle">More than 35</text>
+      <rect x="15" y="95" width="128" height="35" rx="4" fill="#F8FAFC" stroke="#94A3B8"/><text x="79" y="116" fill="#1E293B" text-anchor="middle">Less than 18</text>
+      <rect x="153" y="95" width="128" height="35" rx="4" fill="#F8FAFC" stroke="#94A3B8"/><text x="217" y="116" fill="#1E293B" text-anchor="middle">18-21</text>
+      <rect x="291" y="95" width="128" height="35" rx="4" fill="#F8FAFC" stroke="#94A3B8"/><text x="355" y="116" fill="#1E293B" text-anchor="middle">22-25</text>
+      <rect x="429" y="95" width="128" height="35" rx="4" fill="#F8FAFC" stroke="#94A3B8"/><text x="493" y="116" fill="#1E293B" text-anchor="middle">26-28</text>
+      <rect x="567" y="95" width="128" height="35" rx="4" fill="#F8FAFC" stroke="#94A3B8"/><text x="631" y="116" fill="#1E293B" text-anchor="middle">29-35</text>
+      <rect x="705" y="95" width="128" height="35" rx="4" fill="#F8FAFC" stroke="#94A3B8"/><text x="769" y="116" fill="#1E293B" text-anchor="middle">More than 35</text>
+      <rect x="855" y="95" width="290" height="35" rx="4" fill="#F8FAFC" stroke="#94A3B8"/><text x="1000" y="116" fill="#1E293B" text-anchor="middle">Fiscal Year: 2019-20 ▾</text>
     </g>
+
+    <!-- KPI row -->
+    <rect x="12" y="150" width="275" height="90" rx="6" fill="#F8FAFC" stroke="#e5e9f0"/>
+    <rect x="12" y="150" width="4" height="90" fill="#1E293B"/>
+    <text x="24" y="172" font-size="9.5" fill="#6b7280">Net Payroll PM</text>
+    <text x="24" y="215" font-size="20" font-weight="700" fill="#1E293B">1,904,535</text>
+    <rect x="299" y="150" width="275" height="90" rx="6" fill="#F8FAFC" stroke="#e5e9f0"/>
+    <rect x="299" y="150" width="4" height="90" fill="#1E293B"/>
+    <text x="311" y="172" font-size="9.5" fill="#6b7280">MoM % Change</text>
+    <text x="311" y="215" font-size="20" font-weight="700" fill="#1E293B">10.5%</text>
+    <rect x="586" y="150" width="275" height="90" rx="6" fill="#F8FAFC" stroke="#e5e9f0"/>
+    <rect x="586" y="150" width="4" height="90" fill="#1E293B"/>
+    <text x="598" y="172" font-size="9.5" fill="#6b7280">YoY % Change</text>
+    <text x="598" y="215" font-size="20" font-weight="700" fill="#1E293B">70.8%</text>
+    <rect x="873" y="150" width="275" height="90" rx="6" fill="#F8FAFC" stroke="#e5e9f0"/>
+    <rect x="873" y="150" width="4" height="90" fill="#1E293B"/>
+    <text x="885" y="172" font-size="9.5" fill="#6b7280">AgeBand Volatility</text>
+    <text x="885" y="215" font-size="20" font-weight="700" fill="#1E293B">42,180</text>
+
+    <!-- Sections below, shifted down to make room for the KPI row -->
+    <g transform="translate(0,105)">
 
     <!-- Section: Trend Overview -->
     <text x="12" y="150" font-size="13.5" font-weight="700" fill="#1E293B">Trend Overview</text>
@@ -297,5 +319,6 @@
       <path d="M 610,1134 C 660,1132 710,1148 760,1146 C 810,1144 860,1130 910,1128 C 960,1126 1010,1132 1030,1134 L 1030,1148 C 1010,1146 960,1142 910,1144 C 860,1146 810,1156 760,1158 C 710,1160 660,1146 610,1148 Z" fill="#047857"/>
     </g>
     <text x="600" y="1164" font-size="7.5" fill="#9aa4b2">Band thickness/order = relative rank of Net Payroll among age groups, month to month</text>
+    </g>
   </g>
 </svg>
