@@ -17,36 +17,42 @@ Page 2 is the dashboard content below.
 
 ## The Overall Summary page
 
-I laid it out as **one consolidated dashboard page**, organized into 6 clearly labeled sections:
+I laid it out as **one consolidated dashboard page**, organized into 6 clearly labeled sections. Here's the plan for each, with what's actually built so far:
 
-1. **Trend Overview** — main Net Payroll trend chart with a Rolling 3-Month
-   Average overlay, a month-over-month waterfall, a Smart Narrative
-   auto-summary, a seasonality heatmap (month x fiscal year), a
-   same-month-vs-last-2-years comparison, and a fiscal-quarter progress bar
-2. **Monthly Detail** — a Matrix table (Month x Net Payroll/MoM %/YoY %) with
-   in-cell data bars
-3. **Age-Band Breakdown** — Decomposition Tree, a bar chart and donut share
-   chart by age band, Key Influencers, and a small-multiples row of trend
-   sparklines (one per age band)
-4. **COVID-19 Impact** — a before/during/after 3-bar comparison, a zoomed
-   trend chart with the Mar-Aug 2020 window highlighted, and a recovery
-   timeline
-5. **Advanced Analysis** — a scatter/bubble chart (MoM % vs. YoY % by month,
-   bubble size = Net Payroll, colored by age band) and a view-toggle button
-   group (a field-parameter pattern that swaps which measure drives the
-   page's visuals without duplicating charts)
-6. **Establishment & Ranking Insights** — a combo chart (Net Payroll as a
-   line over New Establishments as bars — the first visual to use the
-   `EstablishmentsFirstECR` field) and a ribbon chart showing how each age
-   band's rank (by Net Payroll) shifts month to month
+1. **Trend Overview** *(in progress)* — planned: main Net Payroll trend chart
+   with a Rolling 3-Month Average overlay, a month-over-month waterfall, a
+   Smart Narrative auto-summary, a seasonality heatmap (month x fiscal year),
+   a same-month-vs-last-2-years comparison, and a fiscal-quarter progress
+   bar. Built so far: the trend line chart with the rolling average overlay,
+   and an empty Waterfall chart (fields not wired up yet). The rest is still
+   to add.
+2. **Monthly Detail** *(not started)* — a Matrix table (Month x Net
+   Payroll/MoM %/YoY %) with in-cell data bars
+3. **Age-Band Breakdown** *(in progress)* — planned: Decomposition Tree, a
+   bar chart and donut share chart by age band, Key Influencers, and a
+   small-multiples row of trend sparklines (one per age band). Built so far:
+   the bar chart, the donut, and a Decomposition Tree — plus a second
+   Decomposition Tree that looks like a duplicate and may have been meant to
+   be Key Influencers instead. Small multiples still to add.
+4. **COVID-19 Impact** *(not started)* — a before/during/after 3-bar
+   comparison, a zoomed trend chart with the Mar-Aug 2020 window
+   highlighted, and a recovery timeline
+5. **Advanced Analysis** *(not started)* — a scatter/bubble chart (MoM % vs.
+   YoY % by month, bubble size = Net Payroll, colored by age band) and a
+   view-toggle button group (a field-parameter pattern that swaps which
+   measure drives the page's visuals without duplicating charts)
+6. **Establishment & Ranking Insights** *(not started)* — a combo chart (Net
+   Payroll as a line over New Establishments as bars — the first visual to
+   use the `EstablishmentsFirstECR` field) and a ribbon chart showing how
+   each age band's rank (by Net Payroll) shifts month to month
 
 The page opens with its own title ("Overall Summary," in the same dark
-slate as every other heading) and the logo mark in the top-right corner — this replaced my
-original header-bar-plus-KPI-row sketch once I saw how the real page actually
-came together. Below that sits a dark filter card holding the **Age Band
-filter** as a row of pills, applying to the whole page below it; a **Fiscal
-Year** filter is still to come, and I'll add it to this same card once it's
-built.
+slate as every other heading) and the logo mark in the top-right corner —
+this replaced my original header-bar sketch once I saw how the real page
+actually came together, though the KPI row from that original sketch made
+it back in below the filters. The filter card now holds both the **Age
+Band filter** (a row of pills) and the **Fiscal Year filter**, both
+applying to the whole page below them.
 
 I set up the typography with a deliberate hierarchy: a big meta-title at the
 very top of this wireframe document, the page's own title text below it (the

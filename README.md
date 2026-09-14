@@ -53,6 +53,7 @@ EPFO Project/
 ├── model/              star schema diagram / data model docs
 ├── dax/                documented DAX measure library
 ├── wireframes/         low-fidelity report page plan (drawn before the build)
+├── theme/              report theme JSON + the logo/watermark files
 ├── screenshots/        report page exports for documentation
 └── EPFO_Payroll_Analytics.pbix
 ```
@@ -93,7 +94,9 @@ focused on Page 1 until Phase 6 is done.
 - [x] Phase 2a — Power Query pipeline: 66 PDFs → deduplicated, unpivoted fact table (456 rows)
 - [x] Phase 2b — Date dimension (with fiscal-year columns) + relationship built
 - [x] Phase 3 — DAX measures (time intelligence, rolling average, volatility, COVID-19 comparison)
-- [ ] Phase 4 — report pages + AI-augmented visuals
+- [ ] Phase 4 — report pages + AI-augmented visuals (in progress: Action
+      Center landing page done, Overall Summary page underway — filters,
+      KPI row, and the Trend Overview / Age-Band Breakdown visuals so far)
 - [ ] Phase 5 — polish (theme, tooltips, mobile layout)
 - [ ] Phase 6 — final documentation and release
 - [ ] Phase 7 — modifications and additions (ongoing, post-release: the

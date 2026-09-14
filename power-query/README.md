@@ -162,6 +162,35 @@ calendar relationship. I prepend a fake day-of-month and parse it to get a
 real date (the 1st of that month), explicitly typed as Date — which is what
 the `Calendar` table's relationship joins against.
 
+## Step 9 — sorting AgeBand correctly
+
+```m
+AgeBandSort = if [AgeBand] = "Less than 18" then 1
+    else if [AgeBand] = "18-21" then 2
+    else if [AgeBand] = "22-25" then 3
+    else if [AgeBand] = "26-28" then 4
+    else if [AgeBand] = "29-35" then 5
+    else 6
+```
+"Less than 18, 18-21, 22-25..." doesn't sort correctly alphabetically (it comes
+out 18-21, 22-25, 26-28, 29-35, Less than 18, More than 35), so every slicer
+and chart using `AgeBand` needed a real sort order.
+
+**My first attempt at this used a DAX calculated column instead of a Power
+Query one** — same logic, just written as a `SWITCH` and added directly in
+the model. Setting `AgeBand`'s **Sort by Column** to that new column threw a
+circular-dependency error: `PayrollMonthlyRaw[AgeBand]`,
+`PayrollMonthlyRaw[AgeBandSort]`, `PayrollMonthlyRaw[AgeBand]`. The reason is
+that DAX calculated columns get evaluated as part of the model's own
+dependency graph, and Sort by Column adds an edge from `AgeBand` to
+`AgeBandSort` — so a DAX column that reads `AgeBand` to compute `AgeBandSort`
+closes the loop, even though nothing about the actual values is circular.
+
+The fix was to build `AgeBandSort` here in Power Query instead, as an
+ordinary Conditional Column. By the time DAX sees it, it's just plain
+imported data — no formula, no dependency edge, no cycle. Sort by Column
+then works exactly as expected.
+
 ## Known gap: 2019-09.pdf
 
 One file (out of 66) still contributes zero rows: its Page 1 table has "Month/

@@ -23,9 +23,15 @@ Here's the pipeline, in order:
    a wide table into the proper long/tall shape a fact table needs.
 7. I add `MonthStart` — a real Date column parsed from the "Apr-2025"-style text
    Month label (`Date.FromText("01-" & [Month])`), explicitly typed as Date.
+8. I add `AgeBandSort` — a Conditional Column mapping each `AgeBand` value to
+   its natural order (1 for "Less than 18" up to 6 for "More than 35"), so I
+   can sort `AgeBand` correctly instead of alphabetically. This has to be
+   built here in Power Query rather than as a DAX calculated column — see
+   `power-query/README.md` for why.
 
 Final columns: `Name` (source file), `Month` (text label), `Total`,
-`EstablishmentsFirstECR`, `AgeBand`, `NetPayroll`, `MonthStart` (date).
+`EstablishmentsFirstECR`, `AgeBand`, `NetPayroll`, `MonthStart` (date),
+`AgeBandSort` (integer).
 
 Final row count: **456** (76 unique months × 6 age bands).
 
@@ -71,7 +77,9 @@ This is what I built Phase 3's DAX measures on top of — see `dax/README.md`.
 ## Why this shape
 
 I kept this as a deliberately simple star schema: one fact table (grain: Month ×
-AgeBand) and one Date dimension. Adding an AgeBand dimension table — with a proper
-sort order, since "Less than 18, 18-21, 22-25..." doesn't sort correctly
-alphabetically — is a reasonable next step once the core model and DAX measures
-are working. I'll get to it then.
+AgeBand) and one Date dimension. I do sort `AgeBand` correctly now (via the
+`AgeBandSort` column above), but that's a lightweight fix on the fact table
+itself, not a real dimension table. Pulling `AgeBand` out into its own
+dimension table is still worth doing once I've got a second fact table (from
+the Future Scope pages) that also needs to join to the same age bands — no
+reason to build it before there's a second table to share it with.
