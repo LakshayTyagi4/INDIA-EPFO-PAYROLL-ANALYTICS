@@ -98,8 +98,8 @@
       fill="none" stroke="#4C1D95" stroke-width="1.6" stroke-dasharray="5,3" stroke-linecap="round"/>
 
     <rect x="728" y="160" width="420" height="184" rx="6" fill="#F8FAFC" stroke="#e5e9f0"/>
-    <text x="740" y="176" font-size="9.5" fill="#6b7280">MoM Waterfall</text>
-    <text x="740" y="187" font-size="6.5" font-style="italic" fill="#a7b0bd">Δ [Total Net Payroll] month to month (fields not wired up yet)</text>
+    <text x="740" y="176" font-size="9.5" fill="#6b7280">Net Payroll Waterfall by Year</text>
+    <text x="740" y="187" font-size="6.5" font-style="italic" fill="#a7b0bd">[Total Net Payroll] by Calendar[Year]</text>
     <line x1="750" y1="320" x2="1136" y2="320" stroke="#d7deea"/>
     <g>
       <rect x="750" y="300" width="34" height="20" fill="#047857"/><rect x="792" y="311" width="34" height="9" fill="#B91C1C"/>
@@ -127,33 +127,31 @@
     <!-- Section: Age-Band Breakdown -->
     <text x="12" y="432" font-size="13.5" font-weight="700" fill="#1E293B">Age-Band Breakdown</text>
 
-    <rect x="12" y="442" width="554" height="257" rx="6" fill="#F8FAFC" stroke="#e5e9f0"/>
-    <text x="24" y="460" font-size="9.5" fill="#6b7280">Decomposition Tree</text>
-    <g stroke="#CBD5E1" stroke-width="1.6" fill="none">
-      <line x1="289" y1="500" x2="200" y2="570"/><line x1="289" y1="500" x2="289" y2="570"/><line x1="289" y1="500" x2="378" y2="570"/>
+    <rect x="12" y="442" width="554" height="528" rx="6" fill="#F8FAFC" stroke="#e5e9f0"/>
+    <text x="24" y="460" font-size="9.5" fill="#6b7280">Net Payroll by Month (treemap)</text>
+    <text x="24" y="472" font-size="6.5" font-style="italic" fill="#a7b0bd">[Total Net Payroll] by Calendar[MonthName]</text>
+    <g fill="#1E293B" stroke="#F8FAFC" stroke-width="2">
+      <rect x="24" y="490" width="220" height="180"/>
+      <rect x="248" y="490" width="150" height="120"/>
+      <rect x="402" y="490" width="152" height="80"/>
+      <rect x="248" y="614" width="90" height="56"/>
+      <rect x="342" y="614" width="90" height="56"/>
+      <rect x="402" y="574" width="152" height="96"/>
+      <rect x="24" y="674" width="140" height="86"/>
+      <rect x="168" y="674" width="130" height="86"/>
+      <rect x="302" y="674" width="130" height="86"/>
+      <rect x="436" y="674" width="118" height="86"/>
     </g>
-    <circle cx="289" cy="500" r="10" fill="#1E293B"/><circle cx="200" cy="570" r="8" fill="#0E7490"/><circle cx="289" cy="570" r="8" fill="#0E7490"/><circle cx="378" cy="570" r="8" fill="#0E7490"/>
-    <text x="289" y="612" font-size="9" fill="#9aa4b2" text-anchor="middle">Total → AgeBand → Date</text>
-    <text x="289" y="640" font-size="6.5" font-style="italic" fill="#a7b0bd" text-anchor="middle">[Total Net Payroll]</text>
+    <text x="289" y="948" font-size="6.5" font-style="italic" fill="#a7b0bd" text-anchor="middle">Note: this groups by month, not by age band — double check that's intentional for this section</text>
 
     <rect x="582" y="442" width="566" height="257" rx="6" fill="#F8FAFC" stroke="#e5e9f0"/>
-    <text x="594" y="460" font-size="9.5" fill="#6b7280">Net Payroll by Age Band (bar chart)</text>
-    <text x="594" y="472" font-size="6.5" font-style="italic" fill="#a7b0bd">[Total Net Payroll] by AgeBand</text>
-    <line x1="600" y1="670" x2="1130" y2="670" stroke="#d7deea"/>
-    <g fill="#1E293B">
-      <rect x="612" y="580" width="56" height="90" rx="2"/><rect x="692" y="540" width="56" height="130" rx="2"/><rect x="772" y="600" width="56" height="70" rx="2"/>
-      <rect x="852" y="560" width="56" height="110" rx="2"/><rect x="932" y="590" width="56" height="80" rx="2"/><rect x="1012" y="520" width="56" height="150" rx="2"/>
-    </g>
-
-    <rect x="12" y="713" width="554" height="257" rx="6" fill="#F8FAFC" stroke="#e5e9f0"/>
-    <text x="24" y="731" font-size="9.5" fill="#6b7280">Decomposition Tree (2nd instance)</text>
-    <text x="24" y="743" font-size="6.5" font-style="italic" fill="#a7b0bd">Same as above, explain-by order swapped — worth checking if this</text>
-    <text x="24" y="753" font-size="6.5" font-style="italic" fill="#a7b0bd">was meant to be Key Influencers instead</text>
+    <text x="594" y="460" font-size="9.5" fill="#6b7280">Decomposition Tree</text>
+    <text x="594" y="472" font-size="6.5" font-style="italic" fill="#a7b0bd">[Total Net Payroll], explain by AgeBand</text>
     <g stroke="#CBD5E1" stroke-width="1.6" fill="none">
-      <line x1="289" y1="790" x2="200" y2="860"/><line x1="289" y1="790" x2="289" y2="860"/><line x1="289" y1="790" x2="378" y2="860"/>
+      <line x1="865" y1="500" x2="776" y2="570"/><line x1="865" y1="500" x2="865" y2="570"/><line x1="865" y1="500" x2="954" y2="570"/>
     </g>
-    <circle cx="289" cy="790" r="10" fill="#1E293B"/><circle cx="200" cy="860" r="8" fill="#0E7490"/><circle cx="289" cy="860" r="8" fill="#0E7490"/><circle cx="378" cy="860" r="8" fill="#0E7490"/>
-    <text x="289" y="902" font-size="9" fill="#9aa4b2" text-anchor="middle">Total → AgeBand → Date</text>
+    <circle cx="865" cy="500" r="10" fill="#1E293B"/><circle cx="776" cy="570" r="8" fill="#0E7490"/><circle cx="865" cy="570" r="8" fill="#0E7490"/><circle cx="954" cy="570" r="8" fill="#0E7490"/>
+    <text x="865" y="640" font-size="9" fill="#9aa4b2" text-anchor="middle">Total → AgeBand</text>
 
     <rect x="582" y="713" width="566" height="257" rx="6" fill="#F8FAFC" stroke="#e5e9f0"/>
     <text x="594" y="731" font-size="9.5" fill="#6b7280">Share of Total (donut)</text>
