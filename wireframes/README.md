@@ -40,17 +40,21 @@ I laid it out as **one consolidated dashboard page**, organized into 6 clearly l
    `EstablishmentsFirstECR` field) and a ribbon chart showing how each age
    band's rank (by Net Payroll) shifts month to month
 
-I put one shared **Age Band filter** (multi-select pills) and **Fiscal Year
-slicer** at the top, applying to the whole page, so I didn't need per-section
-duplicates.
+The page opens with its own title ("Overall Summary," in the same dark
+slate as every other heading) and the logo mark in the top-right corner — this replaced my
+original header-bar-plus-KPI-row sketch once I saw how the real page actually
+came together. Below that sits a dark filter card holding the **Age Band
+filter** as a row of pills, applying to the whole page below it; a **Fiscal
+Year** filter is still to come, and I'll add it to this same card once it's
+built.
 
 I set up the typography with a deliberate hierarchy: a big meta-title at the
-very top of this wireframe document, a normal-sized dashboard header inside
-the card (representing the actual Power BI page title), normal-sized section
-labels dividing the 5 groups above, and small chart captions within each
-visual. Every visual also carries a small italic annotation naming the actual
-DAX measure or column behind it — I kept that in the SVG deliberately, since
-it's build guidance, not decoration.
+very top of this wireframe document, the page's own title text below it (the
+actual Power BI page heading), normal-sized section labels dividing the 6
+groups above, and small chart captions within each visual. Every visual also
+carries a small italic annotation naming the actual DAX measure or column
+behind it — I kept that in the SVG deliberately, since it's build guidance,
+not decoration.
 
 I didn't draw the color legend and theme swatch on the wireframe itself (a
 real dashboard shouldn't carry a key explaining its own colors) — see Visual
