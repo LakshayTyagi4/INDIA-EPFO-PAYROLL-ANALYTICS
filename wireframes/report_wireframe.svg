@@ -49,18 +49,21 @@
 
     <line x1="0" y1="75" x2="1160" y2="75" stroke="#1E293B"/>
 
-    <!-- Filter card: dark panel holding the Age Band slicer + Fiscal Year slicer -->
-    <!-- Panel grew taller in the real build (~85-201 now, was ~85-140) to give the slicers room -->
-    <rect x="0" y="85" width="1160" height="105" rx="8" fill="#333333"/>
+    <!-- Filter card: dark navy panel (its own fill is ThemeDataColor #2, which renders -->
+    <!-- dark navy in this theme, not violet). Pills sit near the TOP of the panel, not -->
+    <!-- centered; there's a real gap of empty dark space below them before the panel ends. -->
+    <rect x="0" y="85" width="1160" height="105" rx="8" fill="#1E293B"/>
     <g font-size="8.5">
-      <rect x="15" y="120" width="128" height="35" rx="4" fill="#F8FAFC" stroke="#94A3B8"/><text x="79" y="141" fill="#1E293B" text-anchor="middle">Less than 18</text>
-      <rect x="153" y="120" width="128" height="35" rx="4" fill="#F8FAFC" stroke="#94A3B8"/><text x="217" y="141" fill="#1E293B" text-anchor="middle">18-21</text>
-      <rect x="291" y="120" width="128" height="35" rx="4" fill="#F8FAFC" stroke="#94A3B8"/><text x="355" y="141" fill="#1E293B" text-anchor="middle">22-25</text>
-      <rect x="429" y="120" width="128" height="35" rx="4" fill="#F8FAFC" stroke="#94A3B8"/><text x="493" y="141" fill="#1E293B" text-anchor="middle">26-28</text>
-      <rect x="567" y="120" width="128" height="35" rx="4" fill="#F8FAFC" stroke="#94A3B8"/><text x="631" y="141" fill="#1E293B" text-anchor="middle">29-35</text>
-      <rect x="705" y="120" width="128" height="35" rx="4" fill="#F8FAFC" stroke="#94A3B8"/><text x="769" y="141" fill="#1E293B" text-anchor="middle">More than 35</text>
-      <rect x="855" y="120" width="290" height="35" rx="4" fill="#F8FAFC" stroke="#94A3B8"/><text x="1000" y="141" fill="#1E293B" text-anchor="middle">Fiscal Year: 2019-20 ▾</text>
+      <rect x="15" y="99" width="128" height="35" rx="4" fill="#F8FAFC" stroke="#94A3B8"/><text x="79" y="120" fill="#1E293B" text-anchor="middle">18-21</text>
+      <rect x="153" y="99" width="128" height="35" rx="4" fill="#F8FAFC" stroke="#94A3B8"/><text x="217" y="120" fill="#1E293B" text-anchor="middle">22-25</text>
+      <rect x="291" y="99" width="128" height="35" rx="4" fill="#F8FAFC" stroke="#94A3B8"/><text x="355" y="120" fill="#1E293B" text-anchor="middle">26-28</text>
+      <rect x="429" y="99" width="128" height="35" rx="4" fill="#F8FAFC" stroke="#94A3B8"/><text x="493" y="120" fill="#1E293B" text-anchor="middle">29-35</text>
+      <rect x="567" y="99" width="128" height="35" rx="4" fill="#F8FAFC" stroke="#94A3B8"/><text x="631" y="120" fill="#1E293B" text-anchor="middle">Less than 18</text>
+      <rect x="705" y="99" width="128" height="35" rx="4" fill="#F8FAFC" stroke="#94A3B8"/><text x="769" y="120" fill="#1E293B" text-anchor="middle">More than 35</text>
+      <rect x="855" y="99" width="140" height="35" rx="4" fill="#F8FAFC" stroke="#94A3B8"/><text x="925" y="120" fill="#1E293B" text-anchor="middle">01-06-2019 📅</text>
+      <rect x="1005" y="99" width="140" height="35" rx="4" fill="#F8FAFC" stroke="#94A3B8"/><text x="1075" y="120" fill="#1E293B" text-anchor="middle">01-07-2025 📅</text>
     </g>
+    <text x="15" y="200" font-size="6.5" font-style="italic" fill="#9aa4b2">Note: pills are showing in this order, not age order — the AgeBandSort fix may have regressed; worth checking. Also: this is a date-range slicer on Calendar[Date], not a Fiscal Year filter.</text>
 
     <!-- KPI row -->
     <rect x="12" y="200" width="275" height="100" rx="6" fill="#F8FAFC" stroke="#e5e9f0"/>
@@ -152,7 +155,7 @@
       <line x1="865" y1="500" x2="776" y2="570"/><line x1="865" y1="500" x2="865" y2="570"/><line x1="865" y1="500" x2="954" y2="570"/>
     </g>
     <circle cx="865" cy="500" r="10" fill="#1E293B"/><circle cx="776" cy="570" r="8" fill="#0E7490"/><circle cx="865" cy="570" r="8" fill="#0E7490"/><circle cx="954" cy="570" r="8" fill="#0E7490"/>
-    <text x="865" y="640" font-size="9" fill="#9aa4b2" text-anchor="middle">Total → AgeBand</text>
+    <text x="865" y="640" font-size="9" fill="#9aa4b2" text-anchor="middle">Total → AgeBand → Date</text>
 
     <rect x="582" y="713" width="566" height="257" rx="6" fill="#F8FAFC" stroke="#e5e9f0"/>
     <text x="594" y="731" font-size="9.5" fill="#6b7280">Share of Total (donut)</text>
