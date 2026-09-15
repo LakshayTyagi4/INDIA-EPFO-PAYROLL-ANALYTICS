@@ -25,7 +25,12 @@ I laid it out as **one consolidated dashboard page**, organized into 6 clearly l
    a same-month-vs-last-2-years comparison, and a fiscal-quarter progress
    bar. Built so far: the trend line chart with the rolling average overlay,
    and a Waterfall chart bound to Total Net Payroll by year (by year, not
-   month-over-month as originally planned). The rest is still to add.
+   month-over-month as originally planned). One bug I've spotted: the
+   waterfall's years aren't in chronological order (it renders
+   2023, 2022, 2024, 2021, 2025, 2020, 2019 — smallest total first, largest
+   last), which looks like the Year axis is sorting by the measure value
+   instead of by Year itself. Still need to fix that (set the axis to sort
+   by Year ascending) before this section is done. The rest is still to add.
 2. **Monthly Detail** *(not started)* — a Matrix table (Month x Net
    Payroll/MoM %/YoY %) with in-cell data bars
 3. **Age-Band Breakdown** *(in progress)* — planned: Decomposition Tree, a
@@ -58,6 +63,15 @@ filter** (a row of pills) and a **date-range filter** on `Calendar[Date]`
 planned; `FiscalYear` still exists as a column on `Calendar` for later, it's
 just not bound to a filter on this page. Both apply to the whole page below
 them.
+
+One thing still to fix: the pills currently render as "18-21, 22-25, 26-28,
+29-35, Less than 18, More than 35" — that's a plain alphabetical sort on the
+AgeBand text (1s and 2s sort before "L" and "M"), not the age order
+`AgeBandSort` is supposed to enforce. My guess is this pill-style slicer
+visual doesn't respect column-level Sort by Column the way the classic
+Slicer does — I still need to check whether it has its own per-visual Sort
+by option, or whether I have to switch back to the classic Slicer to get
+correct ordering.
 
 I set up the typography with a deliberate hierarchy: a big meta-title at the
 very top of this wireframe document, the page's own title text below it (the

@@ -63,7 +63,7 @@
       <rect x="855" y="99" width="140" height="35" rx="4" fill="#F8FAFC" stroke="#94A3B8"/><text x="925" y="120" fill="#1E293B" text-anchor="middle">01-06-2019 📅</text>
       <rect x="1005" y="99" width="140" height="35" rx="4" fill="#F8FAFC" stroke="#94A3B8"/><text x="1075" y="120" fill="#1E293B" text-anchor="middle">01-07-2025 📅</text>
     </g>
-    <text x="15" y="165" font-size="6.5" font-style="italic" fill="#94A3B8">Note: pills are showing in this order, not age order — the AgeBandSort fix may have regressed; worth checking.</text>
+    <text x="15" y="165" font-size="6.5" font-style="italic" fill="#94A3B8">Note: pills are sorting alphabetically (1,2,2,2,L,M), not by AgeBandSort — this slicer type may not respect Sort by Column.</text>
 
     <!-- KPI row -->
     <rect x="12" y="200" width="275" height="100" rx="6" fill="#F8FAFC" stroke="#e5e9f0"/>
@@ -112,6 +112,7 @@
       <rect x="1002" y="266" width="34" height="10" fill="#047857"/><rect x="1044" y="284" width="34" height="14" fill="#B91C1C"/>
       <rect x="1086" y="254" width="34" height="14" fill="#047857"/>
     </g>
+    <text x="740" y="338" font-size="6.5" font-style="italic" fill="#a7b0bd">Note: years currently render out of order (smallest total first) — axis looks sorted by value, not by Year.</text>
 
     <!-- Section: Monthly Detail -->
     <text x="12" y="366" font-size="13.5" font-weight="700" fill="#1E293B">Monthly Detail</text>

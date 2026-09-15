@@ -9,6 +9,18 @@ exiting, and re-joined members by age band, month over month.
 **Data source:** https://www.epfo.gov.in/data-hub/ (monthly PDF releases, Jan 2021–present),
 which I extended back to 2019 via the Wayback Machine — see below.
 
+## Screenshots
+
+**Action Center (Page 1)** — the landing page, currently one button deep:
+
+![Action Center](screenshots/action-center.png)
+
+**Overall Summary (Page 2)** — Trend Overview and Age-Band Breakdown are
+built; COVID-19 Impact, Monthly Detail, Advanced Analysis, and Establishment
+& Ranking Insights are still to come:
+
+![Overall Summary](screenshots/overall-summary.png)
+
 ## Data coverage
 
 **66 monthly reports spanning July 2019 – September 2025**, which I downloaded
@@ -55,8 +67,7 @@ EPFO Project/
 ├── dax/                documented DAX measure library
 ├── wireframes/         low-fidelity report page plan (drawn before the build)
 ├── theme/              report theme JSON + the logo/watermark files
-├── screenshots/        report page exports for documentation (none
-│                       exported yet — the report itself isn't finished)
+├── screenshots/        report page exports for documentation
 └── EPFO_Payroll_Analytics.pbix
 ```
 
