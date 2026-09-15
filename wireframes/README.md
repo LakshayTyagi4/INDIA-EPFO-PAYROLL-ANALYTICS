@@ -7,7 +7,7 @@ This is my plan for the report, sketched out **before** I built it in Power BI �
 
 The report has an **Action Center** page as the entry point — a plain title
 plus a list of buttons, one per dashboard page, that jump straight there. Right
-now that's a single button ("Overall Summary"), since Overall Summary is the
+now that's a single button ("1. Overall Summary"), since Overall Summary is the
 only dashboard page built so far, but the page is built to grow: as I add the
 Age-Band Detail, Gender-Wise, State-Wise Map, and Industry-Wise pages from the
 [Future scope](../README.md#future-scope), each one gets its own button here
@@ -72,6 +72,13 @@ visual doesn't respect column-level Sort by Column the way the classic
 Slicer does — I still need to check whether it has its own per-visual Sort
 by option, or whether I have to switch back to the classic Slicer to get
 correct ordering.
+
+Another thing I only caught by re-checking the raw source PDFs directly: the
+date-range filter's saved default is 01-06-2019 to 01-07-2025, but the model
+actually has data back to April 2019 (`2019-07.pdf` itself has standalone
+Apr-2019 and May-2019 rows in its fiscal-year table). So as saved, the page
+is quietly excluding two real months of recovered data from every visual by
+default — I need to widen the filter's start back to April 2019.
 
 I set up the typography with a deliberate hierarchy: a big meta-title at the
 very top of this wireframe document, the page's own title text below it (the

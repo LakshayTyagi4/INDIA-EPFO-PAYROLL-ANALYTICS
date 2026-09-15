@@ -78,7 +78,7 @@ retrospective table. The same effect pushes the *start* of the final deduplicate
 table earlier than my earliest standalone file too: `2019-07.pdf` itself
 retroactively includes Apr/May/Jun 2019, the start of that fiscal year, so the
 table's true minimum turns out to be **April 2019**, not July 2019. I end up with
-~76-77 unique months running April 2019 through mid-2025 (one straggler file,
+~77 unique months running April 2019 through September 2025 (one straggler file,
 `2019-09.pdf`, still fails extraction because of an unrelated column-layout quirk
 specific to that one file — see `power-query/PayrollMonthly_Raw.pq` for details).
 
