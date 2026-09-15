@@ -48,13 +48,15 @@ per-file provenance is in
 EPFO Project/
 ├── data/
 │   ├── raw/            raw monthly PDFs from epfo.gov.in
-│   └── processed/      cleaned CSV export of the combined table
+│   └── processed/      cleaned CSV export of the combined table (not
+│                       generated yet)
 ├── power-query/        documented M code for the PDF ingestion pipeline
 ├── model/              star schema diagram / data model docs
 ├── dax/                documented DAX measure library
 ├── wireframes/         low-fidelity report page plan (drawn before the build)
 ├── theme/              report theme JSON + the logo/watermark files
-├── screenshots/        report page exports for documentation
+├── screenshots/        report page exports for documentation (none
+│                       exported yet — the report itself isn't finished)
 └── EPFO_Payroll_Analytics.pbix
 ```
 

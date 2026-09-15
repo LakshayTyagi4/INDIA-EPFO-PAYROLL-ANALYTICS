@@ -43,7 +43,8 @@ Rolling 3M Avg Net Payroll =
     CALCULATE([Total Net Payroll], DATESINPERIOD(Calendar[Date], LASTDATE(Calendar[Date]), -3, MONTH)) / 3
 ```
 I built this as a 3-month rolling average to sit alongside the raw monthly
-figure on the Trend page's line chart. It smooths out month-to-month noise so
+figure on the line chart in the Trend Overview section of the Overall
+Summary page. It smooths out month-to-month noise so
 the underlying direction is easier to read.
 
 ## Statistical
@@ -75,9 +76,10 @@ Pre-COVID Avg Monthly Net Payroll =
 COVID Era Avg Monthly Net Payroll =
     CALCULATE(AVERAGEX(VALUES(Calendar[YearMonthSort]), [Total Net Payroll]), Calendar[IsCovidEra] = "COVID Lockdown (Mar-Aug 2020)")
 ```
-These are the two headline comparison numbers I plan to use on the COVID-19
-Impact page (see `wireframes/report_wireframe.svg`): average monthly net
-payroll addition before the lockdown versus during it.
+These are the two headline comparison numbers I plan to use in the
+COVID-19 Impact section of the Overall Summary page (see
+`wireframes/report_wireframe.svg`): average monthly net payroll addition
+before the lockdown versus during it.
 
 ## Status
 

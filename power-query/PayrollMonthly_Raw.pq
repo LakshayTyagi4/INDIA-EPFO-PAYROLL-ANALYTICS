@@ -63,6 +63,30 @@ let
         KeptCols,
         "ParsedData",
         {"Month", "Less than 18", "18-21", "22-25", "26-28", "29-35", "More than 35", "Total", "EstablishmentsFirstECR"}
+    ),
+    // Step 6 — dedupe: each report's Page 1 is cumulative for its fiscal year, so
+    // consecutive months' reports overlap. Sorting by filename descending then
+    // keeping the first row per Month keeps the most recent report's figures.
+    SortedRows = Table.Sort(Expanded, {{"Name", Order.Descending}}),
+    RemovedDuplicates = Table.Distinct(SortedRows, {"Month"}),
+    RemovedNullMonth = Table.SelectRows(RemovedDuplicates, each [Month] <> null),
+    // Step 7 — unpivot the six age-band columns into AgeBand/NetPayroll, turning
+    // the wide table into the long/tall shape a fact table needs.
+    Unpivoted = Table.UnpivotOtherColumns(
+        RemovedNullMonth, {"Name", "Month", "Total", "EstablishmentsFirstECR"},
+        "AgeBand", "NetPayroll"
+    ),
+    // Step 8 — a real Date column, since "Apr-2025" is text.
+    AddedMonthStart = Table.AddColumn(Unpivoted, "MonthStart", each Date.FromText("01-" & [Month]), type date),
+    // Step 9 — sort AgeBand correctly (see README for why this has to be a Power
+    // Query column, not a DAX one).
+    AddedAgeBandSort = Table.AddColumn(AddedMonthStart, "AgeBandSort", each
+        if [AgeBand] = "Less than 18" then 1
+        else if [AgeBand] = "18-21" then 2
+        else if [AgeBand] = "22-25" then 3
+        else if [AgeBand] = "26-28" then 4
+        else if [AgeBand] = "29-35" then 5
+        else 6
     )
 in
-    Expanded
+    AddedAgeBandSort

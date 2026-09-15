@@ -33,9 +33,9 @@ I laid it out as **one consolidated dashboard page**, organized into 6 clearly l
    small-multiples row of trend sparklines (one per age band). Built so far:
    a Treemap of Net Payroll by month (in place of the planned bar chart —
    worth double-checking whether that was meant to group by age band
-   instead, to match the section), a Decomposition Tree explained by age
-   band (an earlier duplicate second tree has been removed), and the donut.
-   Key Influencers and small multiples still to add.
+   instead, to match the section), a Decomposition Tree explained by both
+   AgeBand and Date (an earlier duplicate second tree has been removed),
+   and the donut. Key Influencers and small multiples still to add.
 4. **COVID-19 Impact** *(not started)* — a before/during/after 3-bar
    comparison, a zoomed trend chart with the Mar-Aug 2020 window
    highlighted, and a recovery timeline
@@ -52,9 +52,12 @@ The page opens with its own title ("Overall Summary," in the same dark
 slate as every other heading) and the logo mark in the top-right corner —
 this replaced my original header-bar sketch once I saw how the real page
 actually came together, though the KPI row from that original sketch made
-it back in below the filters. The filter card now holds both the **Age
-Band filter** (a row of pills) and the **Fiscal Year filter**, both
-applying to the whole page below them.
+it back in below the filters. The filter card holds the **Age Band
+filter** (a row of pills) and a **date-range filter** on `Calendar[Date]`
+(two date pickers) — not a Fiscal Year filter, which is what I'd originally
+planned; `FiscalYear` still exists as a column on `Calendar` for later, it's
+just not bound to a filter on this page. Both apply to the whole page below
+them.
 
 I set up the typography with a deliberate hierarchy: a big meta-title at the
 very top of this wireframe document, the page's own title text below it (the
