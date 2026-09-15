@@ -112,7 +112,7 @@
       <rect x="1002" y="266" width="34" height="10" fill="#047857"/><rect x="1044" y="284" width="34" height="14" fill="#B91C1C"/>
       <rect x="1086" y="254" width="34" height="14" fill="#047857"/>
     </g>
-    <text x="740" y="338" font-size="6.5" font-style="italic" fill="#a7b0bd">Note: years currently render out of order (smallest total first) — axis looks sorted by value, not by Year.</text>
+    <text x="740" y="338" font-size="6.5" font-style="italic" fill="#a7b0bd">Note: years currently render out of order (largest total first) — axis looks sorted by value, not by Year.</text>
 
     <!-- Section: Monthly Detail -->
     <text x="12" y="366" font-size="13.5" font-weight="700" fill="#1E293B">Monthly Detail</text>

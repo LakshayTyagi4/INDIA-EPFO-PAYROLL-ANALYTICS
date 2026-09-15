@@ -27,7 +27,7 @@ I laid it out as **one consolidated dashboard page**, organized into 6 clearly l
    and a Waterfall chart bound to Total Net Payroll by year (by year, not
    month-over-month as originally planned). One bug I've spotted: the
    waterfall's years aren't in chronological order (it renders
-   2023, 2022, 2024, 2021, 2025, 2020, 2019 — smallest total first, largest
+   2023, 2022, 2024, 2021, 2025, 2020, 2019 — largest total first, smallest
    last), which looks like the Year axis is sorting by the measure value
    instead of by Year itself. Still need to fix that (set the axis to sort
    by Year ascending) before this section is done. The rest is still to add.

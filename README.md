@@ -27,8 +27,9 @@ built; COVID-19 Impact, Monthly Detail, Advanced Analysis, and Establishment
 into `data/raw/`:
 - Jan 2021 – Sep 2025: complete except for **July 2024**, which has no
   standalone file (see below — I recovered the data itself anyway).
-- Jul–Dec 2019 and Jan–Oct 2020: 10 additional months I recovered from the
-  Wayback Machine (the current site only goes back to Jan 2021) — I verified
+- Jul, Sep, Oct, Dec 2019 and Jan, Feb, Apr, May, Aug, Oct 2020: 10 additional
+  months I recovered from the Wayback Machine (the current site only goes
+  back to Jan 2021) — I verified
   each one independently by reading the report's own "Date" line inside the
   PDF, rather than trusting the crawl metadata.
 - The Power Query pipeline (Phase 2) combines all 66 raw PDFs, and since each
