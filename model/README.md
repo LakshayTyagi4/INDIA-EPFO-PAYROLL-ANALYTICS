@@ -60,6 +60,8 @@ Calculated columns I added:
 - `FiscalYear` (e.g. "2019-20") and `FiscalQuarter` (Q1 = Apr-Jun ... Q4 = Jan-Mar)
   — matching EPFO's own reporting convention (India's fiscal year runs April to
   March), since that's how the source data itself groups time, not the calendar year
+- `IsCovidEra` — flags the Mar-Aug 2020 lockdown window, used by the Pre-COVID
+  and COVID Era comparison measures (see `dax/README.md`)
 
 I marked this as an official **Date Table** (Modeling → Mark as date table, using
 `Date`) so DAX time-intelligence functions work correctly against it.

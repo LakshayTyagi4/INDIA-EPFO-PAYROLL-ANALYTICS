@@ -2,12 +2,19 @@
 
 This is the part of the project I put the most actual engineering into: turning
 66 government PDF reports (not a clean CSV, not an API) into a single reliable
-table I can build a Power BI data model on. The two files here —
-[`fnExtractPage1.pq`](fnExtractPage1.pq) and
-[`PayrollMonthly_Raw.pq`](PayrollMonthly_Raw.pq) — are the actual working M code,
-paste-able straight into Power BI's Advanced Editor. What follows is the
-reasoning behind them: not just what the code does, but why I built it this
-way, including the bugs that shaped it.
+table I can build a Power BI data model on. [`PayrollMonthly_Raw.pq`](PayrollMonthly_Raw.pq)
+is the actual working M code — a single, fully self-contained query, paste-able
+straight into Power BI's Advanced Editor as the `PayrollMonthlyRaw` query. I
+also kept [`fnExtractPage1.pq`](fnExtractPage1.pq) alongside it: I originally
+built the per-file extraction as a separate function query the main query
+would call, then folded it directly into `PayrollMonthly_Raw.pq` instead once
+I'd wrongly suspected the function-call boundary itself might be causing a
+data-privacy restriction to silently break the combine (see the bugs below for
+what the actual cause turned out to be). `fnExtractPage1.pq` is the same
+per-file logic, kept here as a standalone, readable reference — the main
+query doesn't actually call it. What follows is the reasoning behind the
+pipeline: not just what the code does, but why I built it this way, including
+the bugs that shaped it.
 
 ## The problem, in one sentence
 
@@ -211,7 +218,8 @@ age-band detail, state-wise, industry-wise, and gender-wise breakdowns, full
 structural analysis in [`data/raw/README.md`](../data/raw/README.md#future-scope-extensions-beyond-page-1)
 — is real, available data this same `Pdf.Tables` call already has access to;
 I'm just filtering it out at the `Tables{[Name = "Table001 (Page 1)"]}` step.
-Extending `fnExtractPage1` to also pull those tables is next on my list; I
+Extending this pipeline's per-file extraction to also pull those tables is
+next on my list; I
 went through 7 sample reports (2019-2025) in detail to work out what each
 extension will actually need from this pipeline:
 
@@ -248,8 +256,9 @@ extension will actually need from this pipeline:
 
 ## Reproducing / extending this
 
-Both `.pq` files are meant to be pasted directly into a Power BI Desktop
-Advanced Editor — `fnExtractPage1` as a function query, `PayrollMonthly_Raw` as
-the main query that calls it. Drop a new month's PDF into `data/raw/`, hit
-Refresh, and the entire pipeline re-runs against the new file automatically —
-no code changes needed.
+`PayrollMonthly_Raw.pq` is meant to be pasted directly into a Power BI Desktop
+Advanced Editor as the `PayrollMonthlyRaw` query — it's fully self-contained,
+so nothing else needs to be pasted alongside it. `fnExtractPage1.pq` is there
+purely as a readable reference to the same per-file logic. Drop a new month's
+PDF into `data/raw/`, hit Refresh, and the entire pipeline re-runs against the
+new file automatically — no code changes needed.

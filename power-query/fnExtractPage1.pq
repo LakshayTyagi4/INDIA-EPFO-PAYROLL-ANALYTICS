@@ -27,14 +27,11 @@ let
                     ),
                     RemovedTop = Table.RemoveFirstN(Page1, HeaderRowIndex),
                     Promoted = Table.PromoteHeaders(RemovedTop, [PromoteAllScalars = true]),
-                    Renamed = Table.RenameColumns(
-                        Promoted,
-                        {
-                            {"Month/Age#(lf)Band", "Month"},
-                            {"Establishments#(lf)remitting first#(lf)ECR in the month", "EstablishmentsFirstECR"}
-                        },
-                        MissingField.Ignore
-                    ),
+                    ColNames = Table.ColumnNames(Promoted),
+                    Renamed = Table.RenameColumns(Promoted, {
+                        {ColNames{0}, "Month"},
+                        {ColNames{8}, "EstablishmentsFirstECR"}
+                    }),
                     Filtered = Table.SelectRows(
                         Renamed,
                         each let m = Record.FieldOrDefault(_, "Month", null) in m <> null and not Text.StartsWith(m, "2")

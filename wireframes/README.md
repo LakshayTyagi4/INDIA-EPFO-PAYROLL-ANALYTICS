@@ -24,16 +24,18 @@ I laid it out as **one consolidated dashboard page**, organized into 6 clearly l
    Smart Narrative auto-summary, a seasonality heatmap (month x fiscal year),
    a same-month-vs-last-2-years comparison, and a fiscal-quarter progress
    bar. Built so far: the trend line chart with the rolling average overlay,
-   and an empty Waterfall chart (fields not wired up yet). The rest is still
-   to add.
+   and a Waterfall chart bound to Total Net Payroll by year (by year, not
+   month-over-month as originally planned). The rest is still to add.
 2. **Monthly Detail** *(not started)* — a Matrix table (Month x Net
    Payroll/MoM %/YoY %) with in-cell data bars
 3. **Age-Band Breakdown** *(in progress)* — planned: Decomposition Tree, a
    bar chart and donut share chart by age band, Key Influencers, and a
    small-multiples row of trend sparklines (one per age band). Built so far:
-   the bar chart, the donut, and a Decomposition Tree — plus a second
-   Decomposition Tree that looks like a duplicate and may have been meant to
-   be Key Influencers instead. Small multiples still to add.
+   a Treemap of Net Payroll by month (in place of the planned bar chart —
+   worth double-checking whether that was meant to group by age band
+   instead, to match the section), a Decomposition Tree explained by age
+   band (an earlier duplicate second tree has been removed), and the donut.
+   Key Influencers and small multiples still to add.
 4. **COVID-19 Impact** *(not started)* — a before/during/after 3-bar
    comparison, a zoomed trend chart with the Mar-Aug 2020 window
    highlighted, and a recovery timeline

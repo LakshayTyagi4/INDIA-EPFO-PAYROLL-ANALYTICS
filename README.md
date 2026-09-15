@@ -94,7 +94,7 @@ focused on Page 1 until Phase 6 is done.
 - [x] Phase 2a — Power Query pipeline: 66 PDFs → deduplicated, unpivoted fact table (456 rows)
 - [x] Phase 2b — Date dimension (with fiscal-year columns) + relationship built
 - [x] Phase 3 — DAX measures (time intelligence, rolling average, volatility, COVID-19 comparison)
-- [ ] Phase 4 — report pages + AI-augmented visuals (in progress: Action
+- [ ] Phase 4 — report pages + advanced analytical visuals (in progress: Action
       Center landing page done, Overall Summary page underway — filters,
       KPI row, and the Trend Overview / Age-Band Breakdown visuals so far)
 - [ ] Phase 5 — polish (theme, tooltips, mobile layout)
