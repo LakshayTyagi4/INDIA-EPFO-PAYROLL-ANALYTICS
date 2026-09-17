@@ -25,7 +25,7 @@
       <text x="34" y="27" font-size="7.5" fill="#6B7280">&#169; 2026 Lakshay Tyagi</text>
     </g>
 
-    <text x="24" y="52" font-size="26" font-weight="800" fill="#1E293B">EPFO Payroll Analytics</text>
+    <text x="24" y="52" font-size="22" font-weight="800" fill="#1E293B">India EPFO Formal Workforce Analytics</text>
     <line x1="24" y1="70" x2="1136" y2="70" stroke="#94A3B8"/>
 
     <rect x="24" y="90" width="230" height="42" rx="10" fill="#1E293B"/>
@@ -149,18 +149,20 @@
     <text x="594" y="743" font-size="6.5" font-style="italic" fill="#a7b0bd">[Total Net Payroll] % of grand total, by AgeBand</text>
     <g transform="translate(700,845)">
       <circle r="60" fill="none" stroke="#e2e6ed" stroke-width="22"/>
-      <circle r="60" fill="none" stroke="#1E293B" stroke-width="22" stroke-dasharray="63 314"/>
-      <circle r="60" fill="none" stroke="#0E7490" stroke-width="22" stroke-dasharray="63 314" stroke-dashoffset="-63"/>
-      <circle r="60" fill="none" stroke="#4C1D95" stroke-width="22" stroke-dasharray="63 314" stroke-dashoffset="-126"/>
-      <circle r="60" fill="none" stroke="#9D174D" stroke-width="22" stroke-dasharray="63 314" stroke-dashoffset="-189"/>
-      <circle r="60" fill="none" stroke="#047857" stroke-width="22" stroke-dasharray="63 314" stroke-dashoffset="-252"/>
+      <circle r="60" fill="none" stroke="#1E293B" stroke-width="22" stroke-dasharray="98 377"/>
+      <circle r="60" fill="none" stroke="#0E7490" stroke-width="22" stroke-dasharray="92 377" stroke-dashoffset="-98"/>
+      <circle r="60" fill="none" stroke="#4C1D95" stroke-width="22" stroke-dasharray="72 377" stroke-dashoffset="-190"/>
+      <circle r="60" fill="none" stroke="#047857" stroke-width="22" stroke-dasharray="63 377" stroke-dashoffset="-262"/>
+      <circle r="60" fill="none" stroke="#9D174D" stroke-width="22" stroke-dasharray="49 377" stroke-dashoffset="-325"/>
+      <circle r="60" fill="none" stroke="#991B1B" stroke-width="22" stroke-dasharray="3 377" stroke-dashoffset="-374"/>
     </g>
     <g font-size="8.5" fill="#6b7280">
-      <rect x="900" y="820" width="8" height="8" fill="#1E293B"/><text x="912" y="827">Less than 18</text>
-      <rect x="900" y="836" width="8" height="8" fill="#0E7490"/><text x="912" y="843">18-21</text>
-      <rect x="900" y="852" width="8" height="8" fill="#4C1D95"/><text x="912" y="859">22-25</text>
-      <rect x="900" y="868" width="8" height="8" fill="#9D174D"/><text x="912" y="875">26-28</text>
-      <rect x="900" y="884" width="8" height="8" fill="#047857"/><text x="912" y="891">29-35 / More than 35</text>
+      <rect x="900" y="812" width="8" height="8" fill="#1E293B"/><text x="912" y="819">22-25 (25.92%)</text>
+      <rect x="900" y="828" width="8" height="8" fill="#0E7490"/><text x="912" y="835">18-21 (24.43%)</text>
+      <rect x="900" y="844" width="8" height="8" fill="#4C1D95"/><text x="912" y="851">29-35 (19.15%)</text>
+      <rect x="900" y="860" width="8" height="8" fill="#047857"/><text x="912" y="867">More than 35 (16.79%)</text>
+      <rect x="900" y="876" width="8" height="8" fill="#9D174D"/><text x="912" y="883">26-28 (13.08%)</text>
+      <rect x="900" y="892" width="8" height="8" fill="#991B1B"/><text x="912" y="899">Less than 18 (0.63%)</text>
     </g>
     </g>
 
