@@ -113,7 +113,7 @@ focused on Page 1 until Phase 6 is done.
       remain open, tracked as known issues rather than blockers: the
       waterfall's year sort, the AgeBand pill sort, and the date filter's
       start date)
-- [ ] Phase 5 — polish (theme, tooltips, mobile layout)
+- [x] Phase 5 — polish (theme, tooltips, mobile layout)
 - [x] Phase 6 — final documentation and release
 - [ ] Phase 7 — modifications and additions (ongoing, post-release: the
       Future Scope dimensions above, and any other changes that come up
