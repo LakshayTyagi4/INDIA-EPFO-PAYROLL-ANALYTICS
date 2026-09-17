@@ -17,7 +17,12 @@ Page 2 is the dashboard content below.
 
 ## The Overall Summary page
 
-I laid it out as **one consolidated dashboard page**, organized into 6 clearly labeled sections. Here's the plan for each, with what's actually built so far:
+I laid it out as **one consolidated dashboard page**, organized into 3
+clearly labeled sections. I originally sketched 6 (adding a Monthly Detail
+matrix, an Advanced Analysis scatter chart with a view-toggle, and an
+Establishment & Ranking Insights combo/ribbon chart), but decided to keep
+the page to these 3 instead of building out the rest — here's the plan for
+each, with what's actually built so far:
 
 1. **Trend Overview** *(in progress)* — planned: main Net Payroll trend chart
    with a Rolling 3-Month Average overlay, a month-over-month waterfall, a
@@ -31,9 +36,7 @@ I laid it out as **one consolidated dashboard page**, organized into 6 clearly l
    last), which looks like the Year axis is sorting by the measure value
    instead of by Year itself. Still need to fix that (set the axis to sort
    by Year ascending) before this section is done. The rest is still to add.
-2. **Monthly Detail** *(not started)* — a Matrix table (Month x Net
-   Payroll/MoM %/YoY %) with in-cell data bars
-3. **Age-Band Breakdown** *(in progress)* — planned: Decomposition Tree, a
+2. **Age-Band Breakdown** *(in progress)* — planned: Decomposition Tree, a
    bar chart and donut share chart by age band, Key Influencers, and a
    small-multiples row of trend sparklines (one per age band). Built so far:
    a Treemap of Net Payroll by month (in place of the planned bar chart —
@@ -41,7 +44,7 @@ I laid it out as **one consolidated dashboard page**, organized into 6 clearly l
    instead, to match the section), a Decomposition Tree explained by both
    AgeBand and Date (an earlier duplicate second tree has been removed),
    and the donut. Key Influencers and small multiples still to add.
-4. **COVID-19 Impact** *(in progress)* — planned: a before/during/after
+3. **COVID-19 Impact** *(in progress)* — planned: a before/during/after
    3-bar comparison, a zoomed trend chart with the Mar-Aug 2020 window
    highlighted, and a recovery timeline. Built so far: the 3-bar comparison
    (a clustered column chart titled "Pre-COVID vs Post-COVID Impact",
@@ -52,14 +55,6 @@ I laid it out as **one consolidated dashboard page**, organized into 6 clearly l
    second chart differently than planned: it's not zoomed to 2020 or
    highlighted, it's the full history of both percentage measures instead.
    The recovery timeline is still to add.
-5. **Advanced Analysis** *(not started)* — a scatter/bubble chart (MoM % vs.
-   YoY % by month, bubble size = Net Payroll, colored by age band) and a
-   view-toggle button group (a field-parameter pattern that swaps which
-   measure drives the page's visuals without duplicating charts)
-6. **Establishment & Ranking Insights** *(not started)* — a combo chart (Net
-   Payroll as a line over New Establishments as bars — the first visual to
-   use the `EstablishmentsFirstECR` field) and a ribbon chart showing how
-   each age band's rank (by Net Payroll) shifts month to month
 
 The page opens with its own title ("Overall Summary," in the same dark
 slate as every other heading) and the logo mark in the top-right corner —
@@ -90,7 +85,7 @@ default — I need to widen the filter's start back to April 2019.
 
 I set up the typography with a deliberate hierarchy: a big meta-title at the
 very top of this wireframe document, the page's own title text below it (the
-actual Power BI page heading), normal-sized section labels dividing the 6
+actual Power BI page heading), normal-sized section labels dividing the 3
 groups above, and small chart captions within each visual. Every visual also
 carries a small italic annotation naming the actual DAX measure or column
 behind it — I kept that in the SVG deliberately, since it's build guidance,
@@ -111,7 +106,7 @@ Details below instead.
 | Secondary | `#4C1D95` (deep violet) | YoY-change indicators, one small-multiples line, donut 3rd slice |
 | Positive | `#047857` (deep green) | Growth/gain indicators (waterfall gains, Recovery bar) |
 | COVID/Alert | `#991B1B` / `#B91C1C` (deep red) | COVID-era markers, waterfall drops, alert callouts |
-| Extra accent | `#9D174D` (deep rose) | Additional data-series variety (small multiples, scatter chart) |
+| Extra accent | `#9D174D` (deep rose) | Additional data-series variety (small multiples, donut slice) |
 | Card background | `#F4F6FA` | KPI cards, callout boxes |
 | Body text | `#6B7280` | Chart captions and secondary text |
 
@@ -126,8 +121,6 @@ bright colors clashing against dark grey.
 - **Rolling avg overlay**: dashed, secondary color — smoothing overlay on the
   same chart
 - **Waterfall bars**: green = gain vs. prior month, red = drop
-- **Highlighted period**: translucent red rectangle marking Mar-Aug 2020 on
-  time-series charts
 - **Heatmap intensity**: darker cell = higher Net Payroll that month
 
 This is a plan for me to build from, not a screenshot of the finished report

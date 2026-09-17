@@ -1,4 +1,4 @@
-<svg viewBox="0 0 1240 1913" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+<svg viewBox="0 0 1240 1620" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
   <defs>
     <linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#1E293B" stop-opacity="0.30"/>
@@ -6,7 +6,7 @@
     </linearGradient>
   </defs>
 
-  <rect x="0" y="0" width="1240" height="1913" fill="#94A3B8"/>
+  <rect x="0" y="0" width="1240" height="1620" fill="#94A3B8"/>
 
   <!-- BIG title -->
   <text x="40" y="42" font-size="32" font-weight="800" fill="#020617">EPFO Payroll Analytics — Report Wireframe</text>
@@ -114,22 +114,8 @@
     </g>
     <text x="740" y="338" font-size="6.5" font-style="italic" fill="#a7b0bd">Note: years currently render out of order (largest total first) — axis looks sorted by value, not by Year.</text>
 
-    <!-- Section: Monthly Detail -->
-    <text x="12" y="366" font-size="13.5" font-weight="700" fill="#1E293B">Monthly Detail</text>
-    <text x="120" y="366" font-size="6.5" font-style="italic" fill="#a7b0bd">Matrix — Month x Net Payroll / MoM % / YoY %, with in-cell data bars</text>
-    <rect x="12" y="378" width="1136" height="30" rx="6" fill="#F8FAFC" stroke="#e5e9f0"/>
-    <g font-size="7.5" fill="#374151">
-      <text x="20" y="396">Jul-2025</text>
-      <rect x="90" y="386" width="120" height="12" fill="#F1F5F9"/><rect x="90" y="386" width="88" height="12" fill="#1E293B"/><text x="216" y="396">2,104,360</text>
-      <rect x="300" y="386" width="90" height="12" fill="#F1F5F9"/><rect x="300" y="386" width="55" height="12" fill="#047857"/><text x="396" y="396">10.5%</text>
-      <rect x="460" y="386" width="90" height="12" fill="#F1F5F9"/><rect x="460" y="386" width="72" height="12" fill="#4C1D95"/><text x="556" y="396">70.8%</text>
-      <text x="640" y="396">Jun-2025</text>
-      <rect x="710" y="386" width="120" height="12" fill="#F1F5F9"/><rect x="710" y="386" width="80" height="12" fill="#1E293B"/><text x="836" y="396">1,904,535</text>
-      <rect x="920" y="386" width="90" height="12" fill="#F1F5F9"/><rect x="920" y="386" width="66" height="12" fill="#047857"/><text x="1016" y="396">30.2%</text>
-      <rect x="1080" y="386" width="60" height="12" fill="#F1F5F9"/><rect x="1080" y="386" width="47" height="12" fill="#4C1D95"/>
-    </g>
-
-    <!-- Section: Age-Band Breakdown -->
+    <!-- Section: Age-Band Breakdown (shifted up 66 now that Monthly Detail is dropped) -->
+    <g transform="translate(0,-66)">
     <text x="12" y="432" font-size="13.5" font-weight="700" fill="#1E293B">Age-Band Breakdown</text>
 
     <rect x="12" y="442" width="554" height="528" rx="6" fill="#F8FAFC" stroke="#e5e9f0"/>
@@ -176,9 +162,10 @@
       <rect x="900" y="868" width="8" height="8" fill="#9D174D"/><text x="912" y="875">26-28</text>
       <rect x="900" y="884" width="8" height="8" fill="#047857"/><text x="912" y="891">29-35 / More than 35</text>
     </g>
+    </g>
 
-    <!-- Age-Band Breakdown grew taller (2x2 grid) than originally planned, so shift everything below down to compensate -->
-    <g transform="translate(0,244)">
+    <!-- COVID-19 Impact follows Age-Band Breakdown at the same gap it always had (Age-Band shifted up 66, so this shift shrinks from 244 to 178) -->
+    <g transform="translate(0,178)">
 
     <!-- Section: COVID-19 Impact -->
     <text x="12" y="748" font-size="13.5" font-weight="700" fill="#1E293B">COVID-19 Impact</text>
@@ -201,61 +188,6 @@
       fill="none" stroke="#4C1D95" stroke-width="1.6" stroke-dasharray="5,3" stroke-linecap="round"/>
     <text x="640" y="912" font-size="6.5" font-style="italic" fill="#a7b0bd">Built differently than planned: full history, not zoomed to 2020 — no highlight band. Recovery timeline still to add.</text>
 
-    <!-- COVID-19 Impact grew taller than the original 3-box sketch, so shift everything below down to compensate -->
-    <g transform="translate(0,56)">
-
-    <!-- Section: Advanced Analysis -->
-    <text x="12" y="884" font-size="13.5" font-weight="700" fill="#1E293B">Advanced Analysis</text>
-
-    <rect x="12" y="894" width="700" height="112" rx="6" fill="#F8FAFC" stroke="#e5e9f0"/>
-    <text x="24" y="910" font-size="9.5" fill="#6b7280">MoM % vs. YoY % by Month, bubble size = Net Payroll</text>
-    <text x="24" y="921" font-size="6.5" font-style="italic" fill="#a7b0bd">[MoM % Change] x [YoY % Change], size = [Total Net Payroll], colored by AgeBand</text>
-    <line x1="40" y1="936" x2="40" y2="996" stroke="#d7deea"/>
-    <line x1="40" y1="996" x2="690" y2="996" stroke="#d7deea"/>
-    <circle cx="120" cy="980" r="7" fill="#1E293B" opacity="0.75"/>
-    <circle cx="210" cy="965" r="11" fill="#0E7490" opacity="0.75"/>
-    <circle cx="320" cy="948" r="9" fill="#4C1D95" opacity="0.75"/>
-    <circle cx="420" cy="970" r="14" fill="#9D174D" opacity="0.75"/>
-    <circle cx="520" cy="952" r="6" fill="#047857" opacity="0.75"/>
-    <circle cx="600" cy="960" r="10" fill="#B91C1C" opacity="0.75"/>
-
-    <rect x="724" y="894" width="424" height="112" rx="6" fill="#D8DEE8"/>
-    <text x="736" y="910" font-size="9.5" fill="#374151" font-weight="600">View toggle (field parameter)</text>
-    <text x="736" y="921" font-size="6.5" font-style="italic" fill="#a7b0bd">Swaps the measure driving every visual on this page</text>
-    <rect x="736" y="930" width="130" height="24" rx="12" fill="#1E293B"/><text x="801" y="946" font-size="8" fill="#ffffff" text-anchor="middle">Net Payroll</text>
-    <rect x="874" y="930" width="110" height="24" rx="12" fill="#C7D0DC" stroke="#c9d3e2"/><text x="929" y="946" font-size="8" fill="#374151" text-anchor="middle">MoM %</text>
-    <rect x="992" y="930" width="110" height="24" rx="12" fill="#C7D0DC" stroke="#c9d3e2"/><text x="1047" y="946" font-size="8" fill="#374151" text-anchor="middle">YoY %</text>
-    <text x="736" y="976" font-size="7.5" fill="#6b7280">Selected view highlights in blue; charts above re-bind</text>
-    <text x="736" y="988" font-size="7.5" fill="#6b7280">to whichever measure is toggled on, without duplicating visuals.</text>
-
-    <!-- Section: Establishment & Ranking Insights -->
-    <text x="12" y="1022" font-size="13.5" font-weight="700" fill="#1E293B">Establishment &amp; Ranking Insights</text>
-
-    <rect x="12" y="1032" width="560" height="140" rx="6" fill="#F8FAFC" stroke="#e5e9f0"/>
-    <text x="24" y="1048" font-size="9.5" fill="#6b7280">Net Payroll (line) vs. New Establishments (bars)</text>
-    <text x="24" y="1059" font-size="6.5" font-style="italic" fill="#a7b0bd">[Total Net Payroll] · SUM(PayrollMonthlyRaw[EstablishmentsFirstECR])</text>
-    <line x1="34" y1="1064" x2="34" y2="1152" stroke="#d7deea"/>
-    <line x1="34" y1="1152" x2="548" y2="1152" stroke="#d7deea"/>
-    <g fill="#CBD5E1">
-      <rect x="44" y="1120" width="26" height="32" rx="1"/><rect x="84" y="1108" width="26" height="44" rx="1"/><rect x="124" y="1128" width="26" height="24" rx="1"/>
-      <rect x="164" y="1100" width="26" height="52" rx="1"/><rect x="204" y="1112" width="26" height="40" rx="1"/><rect x="244" y="1092" width="26" height="60" rx="1"/>
-      <rect x="284" y="1104" width="26" height="48" rx="1"/><rect x="324" y="1084" width="26" height="68" rx="1"/><rect x="364" y="1096" width="26" height="56" rx="1"/>
-      <rect x="404" y="1076" width="26" height="76" rx="1"/><rect x="444" y="1088" width="26" height="64" rx="1"/><rect x="484" y="1068" width="26" height="84" rx="1"/>
-    </g>
-    <polyline points="57,1128 97,1116 137,1122 177,1100 217,1108 257,1086 297,1094 337,1076 377,1082 417,1064 457,1072 497,1058"
-      fill="none" stroke="#1E293B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-
-    <rect x="588" y="1032" width="560" height="140" rx="6" fill="#F8FAFC" stroke="#e5e9f0"/>
-    <text x="600" y="1048" font-size="9.5" fill="#6b7280">Age-Band Rank Over Time (ribbon)</text>
-    <text x="600" y="1059" font-size="6.5" font-style="italic" fill="#a7b0bd">RANKX(ALL(PayrollMonthlyRaw[AgeBand]), [Total Net Payroll]) by Calendar[Date]</text>
-    <g opacity="0.85">
-      <path d="M 610,1080 C 660,1078 710,1098 760,1096 C 810,1094 860,1072 910,1070 C 960,1068 1010,1078 1030,1080 L 1030,1100 C 1010,1098 960,1088 910,1090 C 860,1092 810,1114 760,1116 C 710,1118 660,1098 610,1100 Z" fill="#1E293B"/>
-      <path d="M 610,1100 C 660,1098 710,1118 760,1116 C 810,1114 860,1092 910,1090 C 960,1088 1010,1098 1030,1100 L 1030,1118 C 1010,1116 960,1108 910,1110 C 860,1112 810,1130 760,1132 C 710,1134 660,1116 610,1118 Z" fill="#0E7490"/>
-      <path d="M 610,1118 C 660,1116 710,1134 760,1132 C 810,1130 860,1112 910,1110 C 960,1108 1010,1116 1030,1118 L 1030,1134 C 1010,1132 960,1126 910,1128 C 860,1130 810,1144 760,1146 C 710,1148 660,1132 610,1134 Z" fill="#4C1D95"/>
-      <path d="M 610,1134 C 660,1132 710,1148 760,1146 C 810,1144 860,1130 910,1128 C 960,1126 1010,1132 1030,1134 L 1030,1148 C 1010,1146 960,1142 910,1144 C 860,1146 810,1156 760,1158 C 710,1160 660,1146 610,1148 Z" fill="#047857"/>
-    </g>
-    <text x="600" y="1164" font-size="7.5" fill="#9aa4b2">Band thickness/order = relative rank of Net Payroll among age groups, month to month</text>
-    </g>
     </g>
     </g>
   </g>
