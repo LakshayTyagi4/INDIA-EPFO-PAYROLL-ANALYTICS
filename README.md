@@ -15,10 +15,8 @@ which I extended back to 2019 via the Wayback Machine — see below.
 
 ![Action Center](screenshots/action-center.png)
 
-**Overall Summary (Page 2)** — 3 sections: Trend Overview, Age-Band
-Breakdown, and COVID-19 Impact. (This screenshot was captured before
-COVID-19 Impact was added, so it doesn't show that section yet — I'll
-re-export it to bring it current.)
+**Overall Summary (Page 2)** — final at 3 sections: Trend Overview,
+Age-Band Breakdown, and COVID-19 Impact:
 
 ![Overall Summary](screenshots/overall-summary.png)
 
