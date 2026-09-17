@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EPFO Payroll Analytics — Report Wireframe</title>
+<style>
+:root {
+  --bg:        #64748b;
+  --surface:   #94A3B8;
+  --card:      #F8FAFC;
+  --border:    #e5e9f0;
+  --border2:   #cbd5e1;
+  --text:      #1E293B;
+  --text2:     #6B7280;
+  --text3:     #94A3B8;
+  --primary:   #1E293B;
+  --accent:    #0E7490;
+  --secondary: #4C1D95;
+  --positive:  #047857;
+  --alert:     #991B1B;
+  --alert2:    #B91C1C;
+  --rose:      #9D174D;
+  --panelhead: #1E293B;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background: var(--bg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.metatitle { color: #fff; max-width: 1240px; width: 100%; margin-bottom: 14px; }
+.metatitle h1 { font-size: 20px; font-weight: 800; }
+.metatitle p { font-size: 12px; color: #cbd5e1; margin-top: 3px; }
+
+/* ── Page-tab nav ── */
+.pagenav {
+  width: 100%; max-width: 1240px; display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap;
+}
+.pagenav button {
+  font-family: inherit; font-size: 11px; font-weight: 700; letter-spacing: .02em;
+  color: #cbd5e1; background: #0F172A; border: 1px solid #334155; padding: 8px 18px;
+  border-radius: 4px 4px 0 0; cursor: pointer;
+}
+.pagenav button.active { background: var(--card); color: var(--text); border-color: var(--card); }
+.pagenav .idx { font-family: "Consolas", monospace; color: var(--accent); margin-right: 8px; font-weight: 800; }
+.pagenav button.active .idx { color: var(--accent); }
+
+/* ── Shell ── */
+.dashboard { width: 100%; max-width: 1240px; background: var(--surface); border-radius: 8px; overflow: hidden; box-shadow: 0 10px 44px rgba(0,0,0,.4); }
+.page { display: none; }
+.page.active { display: block; }
+
+/* ── Action Center ── */
+.landing { padding: 40px; min-height: 340px; }
+.landing-hdr { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
+.landing-title { font-size: 26px; font-weight: 800; color: var(--text); }
+.logo { display: flex; align-items: center; gap: 8px; }
+.logo-mark { width: 26px; height: 26px; border-radius: 6px; background: var(--primary); color: #fff; font-size: 11px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+.logo-text { font-size: 9px; }
+.logo-text .b { font-weight: 700; color: var(--text); display: block; }
+.logo-text .c { color: var(--text2); }
+.divider { height: 1px; background: rgba(30,41,59,.35); margin-bottom: 20px; }
+.launch-btn { display: inline-block; background: var(--primary); color: #fff; font-size: 11px; font-weight: 700; padding: 13px 22px; border-radius: 10px; margin-bottom: 14px; cursor: pointer; }
+.launch-note { font-size: 9.5px; color: #334155; font-style: italic; max-width: 620px; line-height: 1.5; }
+
+/* ── Header (dashboard pages) ── */
+.hdr { padding: 16px 24px 8px; display: flex; align-items: center; justify-content: space-between; }
+.hdr-title { font-size: 28px; font-weight: 800; color: var(--text); }
+
+/* ── Slicer bar ── */
+.sbar { background: var(--primary); margin: 0 24px; border-radius: 8px; padding: 12px 16px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.chip { padding: 8px 16px; border-radius: 4px; font-size: 10.5px; font-weight: 600; background: var(--card); color: var(--text); }
+.datepill { padding: 8px 16px; border-radius: 4px; font-size: 10.5px; font-weight: 600; background: var(--card); color: var(--text); }
+.sbar-note { width: 100%; font-size: 8.5px; font-style: italic; color: #94A3B8; margin-top: 4px; padding: 0 2px; }
+
+/* ── Content ── */
+.ct { padding: 16px 24px 24px; display: flex; flex-direction: column; gap: 18px; }
+
+/* ── KPI row ── */
+.kpirow { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; }
+.kpi { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 14px 16px; border-left: 4px solid var(--primary); }
+.kpi-label { font-size: 9.5px; color: var(--text2); margin-bottom: 8px; }
+.kpi-value { font-size: 20px; font-weight: 700; color: var(--text); }
+
+/* ── Section ── */
+.section-label { font-size: 13.5px; font-weight: 700; color: var(--text); margin-bottom: 2px; }
+.section-body { display: grid; gap: 10px; }
+.g2 { grid-template-columns: 1fr 1fr; }
+.g3 { grid-template-columns: 1.4fr 1fr 1fr; }
+
+/* ── Panel ── */
+.panel { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 12px 14px; }
+.ph-title { font-size: 9.5px; color: var(--text2); }
+.ph-sub { font-size: 6.5px; font-style: italic; color: #a7b0bd; margin-bottom: 6px; }
+.chart-svg { width: 100%; height: auto; display: block; }
+.note { font-size: 6.5px; font-style: italic; color: #a7b0bd; margin-top: 6px; }
+
+/* ── legend ── */
+.legend { display: flex; flex-direction: column; gap: 5px; font-size: 8.5px; color: var(--text2); }
+.legend .sw { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 5px; }
+
+/* ── treemap proxy ── */
+.treemap { display: grid; grid-template-columns: 1.5fr 1fr 1fr; grid-template-rows: 1fr 1fr 0.8fr; gap: 2px; height: 260px; }
+.treemap div { background: var(--primary); border: 2px solid var(--card); }
+</style>
+</head>
+<body>
+
+<div class="metatitle">
+  <h1>EPFO Payroll Analytics — Report Wireframe (interactive)</h1>
+  <p>Click a page tab above the dashboard to switch — mirrors the Page Navigator I'm planning to add to the real report.</p>
+</div>
+
+<div class="pagenav">
+  <button class="active" onclick="showPage(0,this)"><span class="idx">01</span>Action Center</button>
+  <button onclick="showPage(1,this)"><span class="idx">02</span>Overall Summary</button>
+</div>
+
+<div class="dashboard">
+
+<!-- ══════════════════════════ PAGE 1 — ACTION CENTER ══════════════════════════ -->
+<div class="page active" id="page-0">
+  <div class="landing">
+    <div class="landing-hdr">
+      <div class="landing-title">EPFO Payroll Analytics</div>
+      <div class="logo">
+        <div class="logo-mark">LT</div>
+        <div class="logo-text"><span class="b">EPFO Payroll Analytics</span><span class="c">&copy; 2026 Lakshay Tyagi</span></div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="launch-btn">1. Overall Summary</div>
+    <div class="launch-note">More buttons appear here as Age-Band Detail, Gender-Wise, State-Wise Map, and Industry-Wise pages get built (see Future scope in the root README).</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════ PAGE 2 — OVERALL SUMMARY ══════════════════════════ -->
+<div class="page" id="page-1">
+
+  <div class="hdr">
+    <div class="hdr-title">Overall Summary</div>
+    <div class="logo">
+      <div class="logo-mark">LT</div>
+      <div class="logo-text"><span class="b">EPFO Payroll Analytics</span><span class="c">&copy; 2026 Lakshay Tyagi</span></div>
+    </div>
+  </div>
+
+  <div class="sbar">
+    <div class="chip">18-21</div>
+    <div class="chip">22-25</div>
+    <div class="chip">26-28</div>
+    <div class="chip">29-35</div>
+    <div class="chip">Less than 18</div>
+    <div class="chip">More than 35</div>
+    <div style="flex:1;"></div>
+    <div class="datepill">01-06-2019 &#128197;</div>
+    <div class="datepill">01-07-2025 &#128197;</div>
+    <div class="sbar-note">Note: pills are sorting alphabetically (1,2,2,2,L,M), not by AgeBandSort — this slicer type may not respect Sort by Column. Date range also starts 2 months later than the model's real minimum (April 2019).</div>
+  </div>
+
+  <div class="ct">
+    <div class="kpirow">
+      <div class="kpi"><div class="kpi-label">Net Payroll PM</div><div class="kpi-value">74M</div></div>
+      <div class="kpi"><div class="kpi-label">MoM % Change</div><div class="kpi-value">2.41%</div></div>
+      <div class="kpi"><div class="kpi-label">YoY % Change</div><div class="kpi-value">23.71%</div></div>
+      <div class="kpi"><div class="kpi-label">AgeBand Volatility</div><div class="kpi-value">6.39M</div></div>
+    </div>
+
+    <!-- Trend Overview -->
+    <div>
+      <div class="section-label">Trend Overview</div>
+      <div class="section-body g2" style="margin-top:8px;">
+        <div class="panel">
+          <div class="ph-title">Net Payroll (solid) + Rolling 3M Avg (dashed)</div>
+          <div class="ph-sub">[Total Net Payroll] &middot; [Rolling 3M Avg Net Payroll] by Calendar[Date]</div>
+          <svg class="chart-svg" viewBox="0 0 640 150" xmlns="http://www.w3.org/2000/svg">
+            <line x1="0" y1="140" x2="640" y2="140" stroke="#d7deea"/>
+            <polygon points="0,140 60,110 120,122 180,70 240,48 300,82 360,28 420,52 480,16 540,38 600,6 640,6 640,140" fill="#1E293B" opacity="0.12"/>
+            <polyline points="0,140 60,110 120,122 180,70 240,48 300,82 360,28 420,52 480,16 540,38 600,6" fill="none" stroke="#1E293B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <polyline points="0,132 60,120 120,114 180,96 240,82 300,78 360,60 420,52 480,36 540,28 600,16" fill="none" stroke="#4C1D95" stroke-width="1.6" stroke-dasharray="5,3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="panel">
+          <div class="ph-title">Net Payroll Waterfall by Year</div>
+          <div class="ph-sub">[Total Net Payroll] by Calendar[Year]</div>
+          <svg class="chart-svg" viewBox="0 0 400 150" xmlns="http://www.w3.org/2000/svg">
+            <line x1="0" y1="140" x2="400" y2="140" stroke="#d7deea"/>
+            <rect x="0" y="120" width="34" height="20" fill="#047857"/>
+            <rect x="42" y="108" width="34" height="18" fill="#047857"/>
+            <rect x="84" y="126" width="34" height="12" fill="#B91C1C"/>
+            <rect x="126" y="92" width="34" height="20" fill="#047857"/>
+            <rect x="168" y="98" width="34" height="8" fill="#047857"/>
+            <rect x="210" y="78" width="34" height="20" fill="#047857"/>
+            <rect x="252" y="66" width="34" height="10" fill="#047857"/>
+            <rect x="294" y="84" width="34" height="14" fill="#B91C1C"/>
+            <rect x="336" y="74" width="34" height="14" fill="#047857"/>
+          </svg>
+          <div class="note">Note: years currently render out of order (largest total first) — axis looks sorted by value, not by Year.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Age-Band Breakdown -->
+    <div>
+      <div class="section-label">Age-Band Breakdown</div>
+      <div class="section-body g2" style="margin-top:8px;">
+        <div class="panel">
+          <div class="ph-title">Net Payroll by Month (treemap)</div>
+          <div class="ph-sub">[Total Net Payroll] by Calendar[MonthName]</div>
+          <div class="treemap">
+            <div style="grid-row: 1 / 3;"></div><div></div><div></div>
+            <div></div><div></div><div style="grid-row: 2 / 4;"></div>
+            <div></div><div></div><div></div>
+          </div>
+          <div class="note">Note: this groups by month, not by age band — double check that's intentional for this section.</div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <div class="panel">
+            <div class="ph-title">Decomposition Tree</div>
+            <div class="ph-sub">[Total Net Payroll], explain by AgeBand</div>
+            <svg class="chart-svg" viewBox="0 0 300 110" xmlns="http://www.w3.org/2000/svg">
+              <line x1="150" y1="20" x2="80" y2="80" stroke="#CBD5E1" stroke-width="1.6"/>
+              <line x1="150" y1="20" x2="150" y2="80" stroke="#CBD5E1" stroke-width="1.6"/>
+              <line x1="150" y1="20" x2="220" y2="80" stroke="#CBD5E1" stroke-width="1.6"/>
+              <circle cx="150" cy="20" r="9" fill="#1E293B"/>
+              <circle cx="80" cy="80" r="7" fill="#0E7490"/>
+              <circle cx="150" cy="80" r="7" fill="#0E7490"/>
+              <circle cx="220" cy="80" r="7" fill="#0E7490"/>
+              <text x="150" y="105" font-size="9" fill="#9aa4b2" text-anchor="middle">Total &rarr; AgeBand &rarr; Date</text>
+            </svg>
+          </div>
+          <div class="panel">
+            <div class="ph-title">Share of Total (donut)</div>
+            <div class="ph-sub">[Total Net Payroll] % of grand total, by AgeBand</div>
+            <div style="display:flex; align-items:center; gap:16px;">
+              <svg width="90" height="90" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="60" cy="60" r="42" fill="none" stroke="#e2e6ed" stroke-width="22"/>
+                <circle cx="60" cy="60" r="42" fill="none" stroke="#1E293B" stroke-width="22" stroke-dasharray="44 220" transform="rotate(-90 60 60)"/>
+                <circle cx="60" cy="60" r="42" fill="none" stroke="#0E7490" stroke-width="22" stroke-dasharray="44 220" stroke-dashoffset="-44" transform="rotate(-90 60 60)"/>
+                <circle cx="60" cy="60" r="42" fill="none" stroke="#4C1D95" stroke-width="22" stroke-dasharray="44 220" stroke-dashoffset="-88" transform="rotate(-90 60 60)"/>
+                <circle cx="60" cy="60" r="42" fill="none" stroke="#9D174D" stroke-width="22" stroke-dasharray="44 220" stroke-dashoffset="-132" transform="rotate(-90 60 60)"/>
+                <circle cx="60" cy="60" r="42" fill="none" stroke="#047857" stroke-width="22" stroke-dasharray="44 220" stroke-dashoffset="-176" transform="rotate(-90 60 60)"/>
+              </svg>
+              <div class="legend">
+                <span><span class="sw" style="background:#1E293B;"></span>Less than 18</span>
+                <span><span class="sw" style="background:#0E7490;"></span>18-21</span>
+                <span><span class="sw" style="background:#4C1D95;"></span>22-25</span>
+                <span><span class="sw" style="background:#9D174D;"></span>26-28</span>
+                <span><span class="sw" style="background:#047857;"></span>29-35 / More than 35</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COVID-19 Impact -->
+    <div>
+      <div class="section-label">COVID-19 Impact</div>
+      <div class="section-body g2" style="margin-top:8px;">
+        <div class="panel">
+          <div class="ph-title">Pre-COVID vs Post-COVID Impact</div>
+          <div class="ph-sub">[Pre-COVID Avg Monthly Net Payroll] &middot; [COVID Era Avg Monthly Net Payroll] &middot; [Post-COVID Avg Monthly Net Payroll]</div>
+          <svg class="chart-svg" viewBox="0 0 400 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="0" y1="130" x2="400" y2="130" stroke="#d7deea"/>
+            <rect x="60" y="70" width="70" height="60" fill="#1E293B"/><text x="95" y="128" font-size="9" fill="#6b7280" text-anchor="middle" transform="translate(0,10)"></text>
+            <rect x="180" y="100" width="70" height="30" fill="#991B1B"/>
+            <rect x="300" y="50" width="70" height="80" fill="#047857"/>
+          </svg>
+          <div style="display:flex; justify-content:space-around; font-size:8.5px; color:#6b7280; margin-top:-6px;">
+            <span>Pre-COVID</span><span>COVID Era</span><span>Post-COVID</span>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="ph-title">MoM % Change and YoY % Change</div>
+          <div class="ph-sub">[MoM % Change] &middot; [YoY % Change] by Calendar[Date]</div>
+          <svg class="chart-svg" viewBox="0 0 400 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="0" y1="130" x2="400" y2="130" stroke="#d7deea"/>
+            <polyline points="0,90 50,80 100,95 150,70 200,85 250,50 300,75 350,40 400,55" fill="none" stroke="#1E293B" stroke-width="2"/>
+            <polyline points="0,100 50,95 100,105 150,88 200,98 250,75 300,90 350,65 400,78" fill="none" stroke="#4C1D95" stroke-width="1.6" stroke-dasharray="5,3"/>
+          </svg>
+          <div class="note">Built differently than planned: full history, not zoomed to 2020 — no highlight band. Recovery timeline still to add.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script>
+function showPage(i, btn){
+  document.querySelectorAll('.page').forEach((p,idx)=>p.classList.toggle('active', idx===i));
+  document.querySelectorAll('.pagenav button').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+}
+</script>
+
+</body>
+</html>

@@ -1,7 +1,14 @@
 # Wireframes
 
 This is my plan for the report, sketched out **before** I built it in Power BI —
-[`report_wireframe.svg`](report_wireframe.svg).
+[`report_wireframe.svg`](report_wireframe.svg), a static diagram of both pages
+stacked one below the other (the format that actually renders inline on
+GitHub). I also built
+[`report_wireframe.html`](report_wireframe.html) — the same plan, but as a
+real clickable prototype: a page-tab bar at the top switches between Action
+Center and Overall Summary, the same way a Page Navigator would in the real
+report. Download it and open it in a browser to click through it; GitHub's
+file viewer only shows its source, not the rendered page.
 
 ## Page structure: a landing page, then the dashboard pages
 
