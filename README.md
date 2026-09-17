@@ -15,9 +15,11 @@ which I extended back to 2019 via the Wayback Machine — see below.
 
 ![Action Center](screenshots/action-center.png)
 
-**Overall Summary (Page 2)** — Trend Overview and Age-Band Breakdown are
-built; COVID-19 Impact, Monthly Detail, Advanced Analysis, and Establishment
-& Ranking Insights are still to come:
+**Overall Summary (Page 2)** — Trend Overview, Age-Band Breakdown, and
+COVID-19 Impact are built; Monthly Detail, Advanced Analysis, and
+Establishment & Ranking Insights are still to come. (This screenshot was
+captured before COVID-19 Impact was added, so it doesn't show that section
+yet — I'll re-export it once more sections are in.)
 
 ![Overall Summary](screenshots/overall-summary.png)
 
@@ -110,7 +112,8 @@ focused on Page 1 until Phase 6 is done.
 - [x] Phase 3 — DAX measures (time intelligence, rolling average, volatility, COVID-19 comparison)
 - [ ] Phase 4 — report pages + advanced analytical visuals (in progress: Action
       Center landing page done, Overall Summary page underway — filters,
-      KPI row, and the Trend Overview / Age-Band Breakdown visuals so far)
+      KPI row, and the Trend Overview / Age-Band Breakdown / COVID-19 Impact
+      visuals so far)
 - [ ] Phase 5 — polish (theme, tooltips, mobile layout)
 - [ ] Phase 6 — final documentation and release
 - [ ] Phase 7 — modifications and additions (ongoing, post-release: the

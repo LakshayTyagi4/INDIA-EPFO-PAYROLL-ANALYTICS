@@ -41,9 +41,17 @@ I laid it out as **one consolidated dashboard page**, organized into 6 clearly l
    instead, to match the section), a Decomposition Tree explained by both
    AgeBand and Date (an earlier duplicate second tree has been removed),
    and the donut. Key Influencers and small multiples still to add.
-4. **COVID-19 Impact** *(not started)* — a before/during/after 3-bar
-   comparison, a zoomed trend chart with the Mar-Aug 2020 window
-   highlighted, and a recovery timeline
+4. **COVID-19 Impact** *(in progress)* — planned: a before/during/after
+   3-bar comparison, a zoomed trend chart with the Mar-Aug 2020 window
+   highlighted, and a recovery timeline. Built so far: the 3-bar comparison
+   (a clustered column chart titled "Pre-COVID vs Post-COVID Impact",
+   bound to `Pre-COVID Avg Monthly Net Payroll`, `COVID Era Avg Monthly Net
+   Payroll`, and a new `Post-COVID Avg Monthly Net Payroll` measure I added
+   for the "after" bar), plus a line chart of `MoM % Change` and
+   `YoY % Change` over the full date range — I ended up building that
+   second chart differently than planned: it's not zoomed to 2020 or
+   highlighted, it's the full history of both percentage measures instead.
+   The recovery timeline is still to add.
 5. **Advanced Analysis** *(not started)* — a scatter/bubble chart (MoM % vs.
    YoY % by month, bubble size = Net Payroll, colored by age band) and a
    view-toggle button group (a field-parameter pattern that swaps which

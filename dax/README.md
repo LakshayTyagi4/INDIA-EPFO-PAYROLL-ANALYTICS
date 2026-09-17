@@ -75,15 +75,18 @@ Pre-COVID Avg Monthly Net Payroll =
 
 COVID Era Avg Monthly Net Payroll =
     CALCULATE(AVERAGEX(VALUES(Calendar[YearMonthSort]), [Total Net Payroll]), Calendar[IsCovidEra] = "COVID Lockdown (Mar-Aug 2020)")
+
+Post-COVID Avg Monthly Net Payroll =
+    CALCULATE(AVERAGEX(VALUES(Calendar[YearMonthSort]), [Total Net Payroll]), Calendar[Date] > DATE(2020,8,31))
 ```
-These are the two headline comparison numbers I plan to use in the
-COVID-19 Impact section of the Overall Summary page (see
+These three measures are the before/during/after comparison I built into
+the COVID-19 Impact section of the Overall Summary page (see
 `wireframes/report_wireframe.svg`): average monthly net payroll addition
-before the lockdown versus during it.
+before the lockdown, during it, and since.
 
 ## Status
 
-I've built all 9 measures plus the `IsCovidEra` column, and I checked them in
+I've built all 10 measures plus the `IsCovidEra` column, and I checked them in
 the model — they work as expected. I still need to build calculation groups,
 which would consolidate the time-intelligence measures into a single reusable
 set I can apply dynamically to any base measure, and a what-if scenario

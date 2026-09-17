@@ -7,7 +7,8 @@ what the dashboard looks like.
   button is live so far ("1. Overall Summary"); more appear here as the
   [Future scope](../README.md#future-scope) pages get built.
 - `overall-summary.png` — Page 2, the Overall Summary dashboard, exported at
-  the point where Trend Overview and Age-Band Breakdown are built and
+  the point where Trend Overview and Age-Band Breakdown were built and
   COVID-19 Impact, Monthly Detail, Advanced Analysis, and Establishment &
-  Ranking Insights are still to come. I'll re-export this one as I add each
-  remaining section, so it stays a true snapshot rather than going stale.
+  Ranking Insights were still to come. COVID-19 Impact has since been added
+  but this screenshot predates it — I'll re-export as I add each remaining
+  section, so it stays a true snapshot rather than going stale.
